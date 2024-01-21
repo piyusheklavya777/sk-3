@@ -1,6 +1,6 @@
 import { SectionOne } from "./components/section-one/section-one";
 
-export default function Home(): JSX.Element {
+export default function Home() {
   return (
     <div id="body" className=" cust-body-bkg relative">
       <div
@@ -28,7 +28,7 @@ export default function Home(): JSX.Element {
   );
 }
 
-export const BKGVideo: React.FC<{
+const BKGVideo: React.FC<{
   src: string;
 }> = ({ src }) => {
   return (
