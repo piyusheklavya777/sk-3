@@ -15,6 +15,12 @@ const config: Config = {
       },
     },
   },
+  screens: {
+    sm: "640px",
+    md: "768px",
+    lg: "1024px",
+  },
+  darkMode: "class",
   plugins: [],
 };
 export default config;
