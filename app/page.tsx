@@ -1,4 +1,5 @@
 import { SectionOne } from "./components/section-one/section-one";
+import { SectionTwo } from "./components/section-two/section-two";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ export default function Home() {
         <div id="section-1-container" className="flex-none">
           <SectionOne />
         </div>
-        <div id="section-1-container" className="flex-none">
-          <SectionOne />
+        <div id="section-2-container" className="flex-none">
+          <SectionTwo />
         </div>
       </div>
     </div>
