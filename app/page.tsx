@@ -1,7 +1,11 @@
+"use client";
+import { useMediaQuery } from "react-responsive";
 import { SectionOne } from "./components/section-one/section-one";
 import { SectionTwo } from "./components/section-two/section-two";
 
 export default function Home() {
+  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
+  const isMediumScreen = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   return (
     <div id="body" className=" cust-body-bkg relative">
       <div
@@ -16,10 +20,17 @@ export default function Home() {
       </div>
       <div
         id="body-flex-box-cont-295039753"
-        className="z-30 relative flex flex-col items-center justify-between"
+        className="z-30 relative flex flex-col gap-y-10 items-center justify-between"
       >
+        <div
+          id="vertical-separator-589274632"
+          className="flex-none h-[5%]"
+        ></div>
         <div id="section-1-container" className="flex-none">
           <SectionOne />
+        </div>
+        <div id="section-2-container" className="flex-none">
+          <SectionTwo />
         </div>
         <div id="section-2-container" className="flex-none">
           <SectionTwo />
@@ -33,9 +44,8 @@ const BKGVideo: React.FC<{
   src: string;
 }> = ({ src }) => {
   return (
-    // <div id="video-container" className="w-full h-full">
     <video
-      className="w-full h-full object-cover object-center filter blur-sm brightness-[0.2]"
+      className="w-full h-full object-cover object-center opacity-30"
       style={{ transform: "scale(1.35)" }}
       autoPlay
       muted

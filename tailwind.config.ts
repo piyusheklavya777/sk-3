@@ -13,14 +13,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
+      },
     },
+    screens: {
+      sm: "600px",
+      md: "768px",
+      lg: "1024px",
+    },
+    darkMode: "class",
+    plugins: [],
   },
-  screens: {
-    sm: "640px",
-    md: "768px",
-    lg: "1024px",
-  },
-  darkMode: "class",
-  plugins: [],
 };
 export default config;
