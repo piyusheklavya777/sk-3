@@ -8,7 +8,7 @@ export default function Home() {
   const isLargeScreen = useMediaQuery({ minWidth: 1024 });
   const isMediumScreen = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   return (
-    <div id="body" className=" cust-body-bkg relative">
+    <div id="body" className=" cust-body-bkg relative max-w-full">
       <div
         id="body-pattern-29638264"
         className="z-20 absolute inset-0 bg-opacity-50 opacity-40"
