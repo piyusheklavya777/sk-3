@@ -73,7 +73,7 @@ const GlossyCard: React.FC<{
 }> = ({ imagesrc, points }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   return (
-    <div className="flex flex-col items-center justify-start bg-gray-900/30 border border-gray-700 rounded-lg p-4 shadow-lg backdrop-blur-md">
+    <div className="flex flex-col items-center justify-start bg-gray-900/30 border border-gray-700 rounded-lg p-4 shadow-lg backdrop-blur-md transform transition duration-500 hover:scale-[110%]">
       <div id="sk-logo" className="flex-none">
         <Image
           className="relative"

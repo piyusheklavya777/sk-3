@@ -2,6 +2,7 @@
 import { useMediaQuery } from "react-responsive";
 import { SectionOne } from "./components/section-one/section-one";
 import { SectionTwo } from "./components/section-two/section-two";
+import { SectionFAQ } from "./components/section-three/section-faq";
 
 export default function Home() {
   const isLargeScreen = useMediaQuery({ minWidth: 1024 });
@@ -10,7 +11,7 @@ export default function Home() {
     <div id="body" className=" cust-body-bkg relative">
       <div
         id="body-pattern-29638264"
-        className="z-20 absolute inset-0 cust-pattern-1-circuit-board bg-opacity-50 opacity-40"
+        className="z-20 absolute inset-0 bg-opacity-50 opacity-40"
       ></div>
       <div
         id="body-bkg-video-29458548"
@@ -32,9 +33,13 @@ export default function Home() {
         <div id="section-2-container" className="flex-none">
           <SectionTwo />
         </div>
-        <div id="section-2-container" className="flex-none">
-          <SectionTwo />
+        <div id="section-3-container" className="flex-none">
+          <SectionFAQ />
         </div>
+        <div
+          id="vertical-separator-589274632"
+          className="flex-none h-[20px]"
+        ></div>
       </div>
     </div>
   );
