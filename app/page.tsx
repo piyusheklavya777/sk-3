@@ -8,17 +8,17 @@ export default function Home() {
   const isLargeScreen = useMediaQuery({ minWidth: 1024 });
   const isMediumScreen = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
   return (
-    <div id="body" className=" cust-body-bkg relative max-w-full">
+    <div id="body" className=" cust-body-bkg relative">
       <div
         id="body-pattern-29638264"
         className="z-20 absolute inset-0 bg-opacity-50 opacity-40"
       ></div>
-      <div
+      {/* <div
         id="body-bkg-video-29458548"
         className="z-10 absolute inset-0 bg-cover bg-center overflow-hidden"
       >
         <BKGVideo src="/overwatch_action.mp4" />
-      </div>
+      </div> */}
       <div
         id="info-pill-35624574"
         className="w-full z-40 fixed top-0 flex items-center justify-center h-10"
@@ -29,10 +29,7 @@ export default function Home() {
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col gap-y-10 items-center justify-between"
       >
-        <div
-          id="vertical-separator-589274632"
-          className="flex-none h-[5%]"
-        ></div>
+
         <div id="section-1-container" className="flex-none">
           <SectionOne />
         </div>
@@ -59,25 +56,8 @@ const BetaLaunchPill: React.FC = () => {
         className="px-1 text-sm border border-1 uppercase border-green-700 rounded-full font text-green-500 cursor-pointer tracking-tight"
       >
         Beta
-      </span>
-      {' '}version coming soon 🎉
+      </span>{" "}
+      version coming soon 🎉
     </p>
-  );
-};
-
-const BKGVideo: React.FC<{
-  src: string;
-}> = ({ src }) => {
-  return (
-    <video
-      className="w-full h-full object-cover object-center opacity-30"
-      style={{ transform: "scale(1.35)" }}
-      autoPlay
-      muted
-      loop
-      playsInline
-    >
-      <source src={src} type="video/mp4"></source>
-    </video>
   );
 };
