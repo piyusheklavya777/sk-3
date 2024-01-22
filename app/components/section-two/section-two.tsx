@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
+import { motion } from "framer-motion";
 
 const Cards = [
   {
@@ -45,8 +46,7 @@ export const SectionTwo: React.FC = () => {
         id="section-two-title-text-92746523"
         className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest"
       >
-        <span className="text-cyan-300">ScoreKount</span> brings to
-        you.. . . .
+        <span className="text-cyan-300">ScoreKount</span> brings to you.. . . .
       </p>
       <div id="grid-wrapper-6457834993" className="flex-none ">
         <RhinoGrid />
@@ -56,13 +56,42 @@ export const SectionTwo: React.FC = () => {
 };
 
 const RhinoGrid: React.FC = () => {
+  const variants = {
+    offscreen: {
+      scale: 0.5,
+      opacity: 0,
+    },
+    onscreen: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    }
+  };
+
   return (
     <div
       id="Rhino-grid-cont-82749505"
       className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4 lg:gap-10 mx-[5%]"
     >
       {Cards.map((card, index) => (
-        <GlossyCard key={index} imagesrc={card.imagesrc} points={card.points} />
+        <motion.div
+          key={index}
+          className="flex-none"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: false, amount: 0.5 }}
+          variants={variants}
+        >
+          <GlossyCard
+            key={index}
+            imagesrc={card.imagesrc}
+            points={card.points}
+          />
+        </motion.div>
       ))}
     </div>
   );
@@ -74,7 +103,7 @@ const GlossyCard: React.FC<{
 }> = ({ imagesrc, points }) => {
   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   return (
-    <div className="flex flex-col items-center justify-start bg-gray-900/30 border border-gray-700 rounded-lg p-4 shadow-lg backdrop-blur-md transform transition duration-500 hover:scale-[110%]">
+    <div className="h-full flex flex-col items-center justify-start bg-gray-900/30 border border-gray-700 rounded-lg p-4 shadow-lg backdrop-blur-md transform transition duration-500 hover:scale-[110%]">
       <div id="sk-logo" className="flex-none">
         <Image
           className="relative"
@@ -88,14 +117,16 @@ const GlossyCard: React.FC<{
       <div id="vertical-spacer" className="flex-none h-[10px]"></div>
       <ul className="lg:px-[20%]">
         {points.map((point, index) => {
-          const borderColor = index % 2 === 0 ? "border-red-400" : "border-blue-300";
+          const borderColor =
+            index % 2 === 0 ? "border-red-400" : "border-blue-300";
           return (
             <>
               <li
                 key={index}
                 className={`pl-[5%] text-sm md:text-md mb-1 text-white font-lato tracking-widest border-l-4 ${borderColor}`}
               >
-                {point}{"🔥"}
+                {point}
+                {"🔥"}
               </li>
               <div id="vertical-spacer" className="h-[10px]"></div>
             </>
