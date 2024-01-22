@@ -51,7 +51,7 @@ export const SectionFAQ: React.FC = () => {
         className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest"
       >
         What people are getting{" "}
-        <span className="transform transition duration-3000 ease-in-out text-red-500 text-6xl hover:text-3xl underline cursor-pointer">
+        <span className="text-red-500 text-6xl underline cursor-pointer">
           curious
         </span>{" "}
         about.. . . .
@@ -67,7 +67,7 @@ const FAQCardsGrid: React.FC = () => {
   return (
     <div
       id="faq-section-cont-872364452"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-10 mx-[5%]"
+      className="grid grid-cols-1 lg:grid-cols-3 gap-10 mx-[5%]"
     >
       {faqs.map((faq) => (
         <FAQCard
@@ -99,7 +99,7 @@ const FAQCard: React.FC<{
       </div>
       <h3
         id={`faq-card-question-${index}`}
-        className={`w-full text-xl lg:text-3xl text-white font-bold border-l-4 pl-2 ${leftBorderColor} rounded-tr-[40px] pr-5 py-2 ${questionBlockBkgColor}`}
+        className={`w-full text-xl lg:text-2xl text-white font-bold border-l-4 pl-2 ${leftBorderColor} rounded-tr-[40px] pr-5 py-2 ${questionBlockBkgColor}`}
       >
         {question}
       </h3>
@@ -114,7 +114,7 @@ const FAQCard: React.FC<{
       {/* <div id="vertical-spacer" className="flex-none h-[5px]"></div> */}
       <p
         id={`faq-card-answer-${index}`}
-        className="text-md lg:text-xl text-white font-light font-lato tracking-wide"
+        className="text-md lg:text-l text-white font-light font-lato tracking-wide"
       >
         {answer}
       </p>

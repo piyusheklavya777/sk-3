@@ -20,6 +20,12 @@ export default function Home() {
         <BKGVideo src="/overwatch_action.mp4" />
       </div>
       <div
+        id="info-pill-35624574"
+        className="w-full z-40 fixed top-0 flex items-center justify-center h-10"
+      >
+        <BetaLaunchPill />
+      </div>
+      <div
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col gap-y-10 items-center justify-between"
       >
@@ -44,6 +50,20 @@ export default function Home() {
     </div>
   );
 }
+
+const BetaLaunchPill: React.FC = () => {
+  return (
+    <p className="max-w-[300px] bg-black px-2 py-1 rounded-full text-md text-gray-400 font-lato font-normal tracking-widest">
+      <span
+        id="beta_pill_text_8273645"
+        className="px-1 text-sm border border-1 uppercase border-green-700 rounded-full font text-green-500 cursor-pointer tracking-tight"
+      >
+        Beta
+      </span>
+      {' '}version coming soon 🎉
+    </p>
+  );
+};
 
 const BKGVideo: React.FC<{
   src: string;

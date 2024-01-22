@@ -4,14 +4,6 @@ import { useMediaQuery } from "react-responsive";
 
 const Cards = [
   {
-    imagesrc: "/text-leaderboard.png",
-    points: [
-      "AI based tracking with game specific reward system",
-      "Performace based rewards",
-      'Unique tier reward "Ethelete" for top winners',
-    ],
-  },
-  {
     imagesrc: "/text-p2rr.png",
     points: [
       "Earn in-app currency with matches and tournaments",
@@ -19,6 +11,15 @@ const Cards = [
       'Exclusive offers for top players "Etheletes"',
     ],
   },
+  {
+    imagesrc: "/text-leaderboard.png",
+    points: [
+      "AI based tracking with game specific reward system",
+      "Performace based rewards",
+      'Unique tier reward "Ethelete" for top winners',
+    ],
+  },
+
   {
     imagesrc: "/text-1v1anyone.png",
     points: ["Play 1v1 matches with anyone", "Challenge for quick duels"],
@@ -44,7 +45,7 @@ export const SectionTwo: React.FC = () => {
         id="section-two-title-text-92746523"
         className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest"
       >
-        Abilities <span className="text-cyan-300">ScoreKount</span> brings to
+        <span className="text-cyan-300">ScoreKount</span> brings to
         you.. . . .
       </p>
       <div id="grid-wrapper-6457834993" className="flex-none ">
