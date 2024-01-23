@@ -3,10 +3,18 @@ import { useMediaQuery } from "react-responsive";
 import { SectionOne } from "./components/section-one/section-one";
 import { SectionTwo } from "./components/section-two/section-two";
 import { SectionFAQ } from "./components/section-three/section-faq";
+import { ClosedBetaSection } from "./components/closed-beta-form-section/closed-beta-form-section";
+import Image from "next/image";
 
 export default function Home() {
-  const isLargeScreen = useMediaQuery({ minWidth: 1024 });
-  const isMediumScreen = useMediaQuery({ minWidth: 768, maxWidth: 1023 });
+  const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+  const handleScroll = () => {
+    // Calculate 20vh from the current scroll position
+    window.scrollTo({
+      top: window.innerHeight * (isMobile ? 0.6 : 0.8),
+      behavior: "smooth",
+    });
+  };
   return (
     <div id="body" className=" cust-body-bkg relative">
       <div
@@ -21,17 +29,44 @@ export default function Home() {
       </div> */}
       <div
         id="info-pill-35624574"
-        className="w-full z-40 fixed top-0 flex items-center justify-center h-10"
+        className="w-full z-40 fixed top-2 inset-x-0 inline-flex ic jc"
       >
         <BetaLaunchPill />
+      </div>
+      <div
+        id="navbar-235131"
+        // className="w-full z-40 fixed top-0 flex items-center justify-center h-10"
+        className="w-full z-40 fixed flex justify-between ic bg-black"
+      >
+        <div id="navbar-logo-9765328 pl-[20px] border">
+          <Image
+            className="relative"
+            src="/sk-logo.png"
+            alt="Next.js Logo"
+            width={isMobile ? 80 : 80}
+            height={40}
+            priority
+          />
+        </div>
+        <div></div>
+        <div id="signup-cta-wh65434" className="flex justify-end items-center">
+          <p
+            className="text-white/80 font-bold p-2 mx-[20px] my-[10px] text-nowrap text-sm font-poppins tracking-widest border-2 border-white/50 rounded-[5px] cursor-pointer"
+            onClick={handleScroll}
+          >
+            SIGN UP
+          </p>
+        </div>
       </div>
       <div
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col gap-y-10 items-center justify-between"
       >
-
         <div id="section-1-container" className="flex-none">
           <SectionOne />
+        </div>
+        <div id="join-closed-beta-section" className="flex-none">
+          <ClosedBetaSection />
         </div>
         <div id="section-2-container" className="flex-none">
           <SectionTwo />
@@ -57,7 +92,7 @@ const BetaLaunchPill: React.FC = () => {
       >
         Beta
       </span>{" "}
-      version coming soon 🎉
+      coming soon 🎉
     </p>
   );
 };

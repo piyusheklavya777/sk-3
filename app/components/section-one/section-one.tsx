@@ -7,11 +7,50 @@ import { useEffect } from "react";
 import { useAutoScroll } from "@/app/utility-hooks/auto-scroll-hoook";
 
 export const SectionOne: React.FC = () => {
+  const handleScroll = () => {
+    // Calculate 20vh from the current scroll position
+    window.scrollTo({
+      top: window.innerHeight * 0.8 + window.scrollY,
+      behavior: "smooth",
+    });
+  };
   return (
     <div
       id="section-one-cont-425329842"
-      className=" h-[100vh] w-[100%] relative text-wrap"
+      className=" h-[70vh] lg:h-[100vh] w-[100%] relative text-wrap flex flex-col items-center justify-start"
     >
+      <div
+        id="blurred-card-container-4245432"
+        className="z-30 mt-[25%] lg:mt-[8%] relative w-full flex justify-center items-start"
+      >
+        <div className="flex-none w-full flex jc ic">
+          <div
+            id="blurred-card-cont-425329842"
+            className="relative w-[90%] lg:w-[60%] flex jc ic"
+          >
+            <BlurredCard />
+          </div>
+        </div>
+      </div>
+      <div
+        id="scroll-down-arrow-container"
+        className="z-30 relative m-[10px] cursor-pointer"
+        onClick={handleScroll}
+      >
+        <motion.p
+          animate={{ y: [0, 20, 0] }} // Moves down 15px and back up
+          transition={{
+            duration: 1.5, // Duration of one cycle
+            ease: "easeInOut",
+            repeat: Infinity,
+            repeatType: "reverse",
+          }}
+          id="scroll-down-g97yrwv"
+          className="material-symbols-outlined text-white text-xl lg:text-4xl"
+        >
+          expand_more
+        </motion.p>
+      </div>
       <div
         id="body-bkg-video-29458548"
         className="z-10 absolute inset-0 bg-cover bg-center overflow-hidden"
@@ -23,11 +62,9 @@ export const SectionOne: React.FC = () => {
         className="z-20 absolute inset-x-0 bottom-0 h-[30%] bg-cover bg-center overflow-hidden bg-gradient-to-b from-transparent to-[rgba(0,0,40,1)]"
       ></div>
       <div
-        id="blurred-card-container-4245432"
-        className="z-30 pt-[50px] relative w-full h-full flex justify-center items-start"
-      >
-        <BlurredCard />
-      </div>
+        id="body-bkg-top-fade-into-blue-29765972"
+        className="z-20 absolute inset-x-0 top-0 h-[30%] bg-cover bg-center bg-gradient-to-b from-[rgba(0,0,40,1)] to-transparent"
+      ></div>
     </div>
   );
 };
@@ -79,7 +116,7 @@ export const BlurredCard: React.FC = () => {
   return (
     <div
       id="blurred-card"
-      className="w-full h-full max-h-[60%] max-w-[80%] relative rounded-[15px] p-[5%] cust-blurred-card flex flex-col lg:flex-row items-center justify-start lg:justify-between"
+      className="w-full h-full max-h-[80vh] max-w-[80%] relative rounded-[15px] p-[5%] cust-blurred-card flex flex-col lg:flex-row items-center justify-start lg:justify-between"
     >
       <div id="title-section-clr-927645808" className="flex-none">
         <TitleBox />
@@ -97,7 +134,7 @@ export const BlurredCard: React.FC = () => {
         className="p-2 text-xl lg:text-4xl text-white font-lato font-bold tracking-widest leading-loose text-wrap"
       >
         Cash your actual game time from your favourite games into redeemable
-        rewardss
+        rewards
       </p>
     </div>
   );

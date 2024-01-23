@@ -39,6 +39,24 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  .ic {
+    align-items: center;
+  }
+  .ie {
+    align-items: end;
+  }
+  .is {
+    align-items: start;
+  }
+  .jc {
+    justify-content: center;
+  }
+  .je {
+    justify-content: end;
+  }
+  .js {
+    justify-content: start;
+  }
 }
 
 .cust-body-bkg {
