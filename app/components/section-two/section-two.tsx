@@ -51,7 +51,7 @@ export const SectionTwo: React.FC = () => {
       <div
         id="grid-wrapper-6457834993"
         className="flex-none"
-        style={{ border: "1px solid red", justifyContent: "space-between" }}
+        style={{ justifyContent: "space-between" }}
       >
         <RhinoGrid />
       </div>
@@ -89,7 +89,7 @@ const RhinoGrid: React.FC = () => {
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.5 }}
           variants={variants}
-          style={{ overflow: "hidden", border: "1px solid red" }}
+          style={{ overflow: "hidden", border: "1px solid redd" }}
         >
           {/* <GlossyCard
             key={index}
