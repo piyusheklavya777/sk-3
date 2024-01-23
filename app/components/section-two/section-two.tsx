@@ -44,11 +44,15 @@ export const SectionTwo: React.FC = () => {
     >
       <p
         id="section-two-title-text-92746523"
-        className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest"
+        className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest bg-black/50 p-20 rounded-lg"
       >
         <span className="text-cyan-300">ScoreKount</span> brings to you.. . . .
       </p>
-      <div id="grid-wrapper-6457834993" className="flex-none ">
+      <div
+        id="grid-wrapper-6457834993"
+        className="flex-none"
+        style={{ border: "1px solid red", justifyContent: "space-between" }}
+      >
         <RhinoGrid />
       </div>
     </div>
@@ -69,13 +73,13 @@ const RhinoGrid: React.FC = () => {
         bounce: 0.4,
         duration: 0.8,
       },
-    }
+    },
   };
 
   return (
     <div
       id="Rhino-grid-cont-82749505"
-      className="grid grid-cols-1 lg:grid-cols-2 lg:grid-rows-2 gap-4 lg:gap-10 mx-[5%]"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 "
     >
       {Cards.map((card, index) => (
         <motion.div
@@ -85,15 +89,30 @@ const RhinoGrid: React.FC = () => {
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.5 }}
           variants={variants}
+          style={{ overflow: "hidden", border: "1px solid red" }}
         >
-          <GlossyCard
+          {/* <GlossyCard
             key={index}
             imagesrc={card.imagesrc}
             points={card.points}
+          /> */}
+          <FeaturesCard
+            key={index}
+            imagesrc={card.imagesrc}
+            description={card.points[0]}
           />
         </motion.div>
       ))}
     </div>
+  );
+};
+
+const FeaturesCard: React.FC<{
+  imagesrc: string;
+  description: string;
+}> = ({ imagesrc, description }) => {
+  return (
+    <div className="h-full js ic bg-black/50 border border-[#000020]/30 rounded-[5px] p-[180px]"></div>
   );
 };
 

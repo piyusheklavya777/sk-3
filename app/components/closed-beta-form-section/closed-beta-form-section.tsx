@@ -40,13 +40,21 @@ const BetaRegistrationForm: React.FC = () => {
         placeholder="discord handle e.g. username#1234"
         className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#c2bdff]/60 text-[#c2bdff]/70 placeholder:text-[#c2bdff]/40 placeholder:italic font-lato p-2 outline-none bg-black/30"
       />
-      <div id="separator-76345748" className="flex-none w-full h-[20px]"></div>
-      <button
+      {/* code for a multiselect */}
+      <div id="separator-76345748" className="flex-none w-full h-[80px]"></div>
+      <motion.button
+        animate={{ scale: 1 }}
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "mirror",
+        }}
         id="closed-beta-form-submit-button-8273645"
         className="px-4 py-4 rounded-[5px] font-lato tracking-widest text-[#c2bdff]/90 text-sm border-b border-[#c2bdff]/60 p-2 outline-none bg-black/40 transition duration-500 ease-in-out"
       >
         JOIN CLOSED BETA
-      </button>
+      </motion.button>
     </div>
   );
 };
@@ -59,14 +67,17 @@ const RegistrationsCounter: React.FC = () => {
     >
       <p
         id="closed-beta-registrations-counter-text-8273645"
-        className="text-gray-200 font-lato tracking-widest text-4xl lg:text-2xl"
+        className="text-gray-200 font-lato tracking-widest text-4xl lg:text-6xl"
       >
-        45,000
+        44,906+
       </p>
-      <div id="separator-76345748" className="flex-none w-full h-[2px] bg-gradient-to-r from-transparent via-[#c2bdff] to-transparent"></div>
+      <div
+        id="separator-76345748"
+        className="flex-none w-full h-[2px] bg-gradient-to-r from-transparent via-[#c2bdff] to-transparent"
+      ></div>
       <p
         id="closed-beta-registrations-counter-text-8273645"
-        className="text-[#c2bdff] font-lato tracking-widest text-xl"
+        className="text-[#c2bdff] font-lato tracking-widest text-3xl lg:text-3xl"
       >
         REGISTRATIONS
       </p>
