@@ -8,10 +8,10 @@ export const SectionFAQ: React.FC = () => {
     >
       <p
         id="faq-section-title-text-92746523"
-        className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest"
+        className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest bg-black/50 p-10 rounded-lg"
       >
         What people are getting{" "}
-        <span className="text-red-500 text-6xl underline cursor-pointer">
+        <span className="text-red-500 text-5xl underline cursor-pointer">
           curious
         </span>{" "}
         about.. . . .

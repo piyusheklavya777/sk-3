@@ -5,16 +5,24 @@ import { motion } from "framer-motion";
 
 const Cards = [
   {
-    imagesrc: "/text-p2rr.png",
+    title: "P2RR",
+    // imagesrc: "/text-p2rr.png",
+    imagesrc: "/features-3-p2rr.png",
     points: [
+      "Convert your game time into crypto earnings. Exclusive offers for top players.",
+      // old
       "Earn in-app currency with matches and tournaments",
       "Redeem unique in-game items with the currency",
       'Exclusive offers for top players "Etheletes"',
     ],
   },
   {
-    imagesrc: "/text-leaderboard.png",
+    title: "Leaderboard",
+    // imagesrc: "/text-leaderboard.png",
+    imagesrc: "/features-2-leaderboard.png",
     points: [
+      "AI based tracking with game specific reward system🔥",
+      // old
       "AI based tracking with game specific reward system",
       "Performace based rewards",
       'Unique tier reward "Ethelete" for top winners',
@@ -22,14 +30,14 @@ const Cards = [
   },
 
   {
-    imagesrc: "/text-1v1anyone.png",
-    points: ["Play 1v1 matches with anyone", "Challenge for quick duels"],
-  },
-  {
-    imagesrc: "/text-brands.png",
+    title: "1V1 Anyone",
+    // imagesrc: "/text-1v1anyone.png",
+    imagesrc: "/features-1-1v1.png",
     points: [
-      "Reach engaged gamers through the ScoreKount Network",
-      "engage them through wallets with exciting in-game brand activation",
+      "Challenge anyone with one click from any leaderboard",
+      // old
+      "Play 1v1 matches with anyone",
+      "Challenge for quick duels",
     ],
   },
 ];
@@ -42,12 +50,17 @@ export const SectionTwo: React.FC = () => {
       id="SectionTwo"
       className="mx-[5%] flex flex-col items-center justify-start gap-y-10"
     >
-      <p
-        id="section-two-title-text-92746523"
-        className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest bg-black/50 p-20 rounded-lg"
+      <div
+        id="section-two-title-text-outer-box-92746523"
+        className="flex-none bg-black/50 p-20 rounded-lg"
       >
-        <span className="text-cyan-300">ScoreKount</span> brings to you.. . . .
-      </p>
+        <p
+          id="section-two-title-text-inner-box-92746523"
+          className=" text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest border-l border-b-4 border-gray-300 rounded-bl-md p-3"
+        >
+          <span className="text-cyan-300">ScoreKount</span> brings to you.. . .
+        </p>
+      </div>
       <div id="grid-wrapper-6457834993" className="flex-none">
         <RhinoGrid />
       </div>
@@ -75,7 +88,7 @@ const RhinoGrid: React.FC = () => {
   return (
     <div
       id="Rhino-grid-cont-82749505"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10"
+      className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10"
     >
       {Cards.map((card, index) => (
         <motion.div
@@ -94,6 +107,7 @@ const RhinoGrid: React.FC = () => {
           /> */}
           <FeaturesCard
             key={index}
+            title={card.title}
             imagesrc={card.imagesrc}
             description={card.points[0]}
           />
@@ -104,13 +118,14 @@ const RhinoGrid: React.FC = () => {
 };
 
 const FeaturesCard: React.FC<{
+  title: string;
   imagesrc: string;
   description: string;
-}> = ({ imagesrc, description }) => {
+}> = ({ title, imagesrc, description }) => {
   return (
     <div
       id="features-card-cont-6857987"
-      className="h-full js ic bg-black/50 border border-[#000020]/30 rounded-[5px] flex flex-col"
+      className="h-full js ic bg-black/50 border border-[#000020]/30 rounded-[5px] flex flex-col p-2"
     >
       <div id="title-images" className="flex-none">
         <Image
@@ -118,9 +133,23 @@ const FeaturesCard: React.FC<{
           src={imagesrc}
           alt="Next.js Logo"
           width={300}
-          height={100}
+          height={300}
           priority
         />
+      </div>
+      <div id="title-text-56574234" className="flex-none">
+        <h3 className="text-white text-4xl font-poppins font-bold uppercase tracking-widest p-2">
+          {title}
+        </h3>
+        <div
+          id="line-separator-89g4u5gpuo894"
+          className="flex-none h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"
+        ></div>
+      </div>
+      <div id="description-text-56574234" className="flex-none">
+        <h3 className="text-white text-lg font-lato tracking-widest p-2 text-center">
+          {description}
+        </h3>
       </div>
     </div>
   );
