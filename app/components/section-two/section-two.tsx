@@ -48,11 +48,7 @@ export const SectionTwo: React.FC = () => {
       >
         <span className="text-cyan-300">ScoreKount</span> brings to you.. . . .
       </p>
-      <div
-        id="grid-wrapper-6457834993"
-        className="flex-none"
-        style={{ justifyContent: "space-between" }}
-      >
+      <div id="grid-wrapper-6457834993" className="flex-none">
         <RhinoGrid />
       </div>
     </div>
@@ -79,17 +75,17 @@ const RhinoGrid: React.FC = () => {
   return (
     <div
       id="Rhino-grid-cont-82749505"
-      className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10 "
+      className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-10"
     >
       {Cards.map((card, index) => (
         <motion.div
           key={index}
-          className="flex-none"
+          className=""
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.5 }}
           variants={variants}
-          style={{ overflow: "hidden", border: "1px solid redd" }}
+          // style={{ overflow: "hidden", border: "1px solid redd" }}
         >
           {/* <GlossyCard
             key={index}
@@ -112,7 +108,21 @@ const FeaturesCard: React.FC<{
   description: string;
 }> = ({ imagesrc, description }) => {
   return (
-    <div className="h-full js ic bg-black/50 border border-[#000020]/30 rounded-[5px] p-[180px]"></div>
+    <div
+      id="features-card-cont-6857987"
+      className="h-full js ic bg-black/50 border border-[#000020]/30 rounded-[5px] flex flex-col"
+    >
+      <div id="title-images" className="flex-none">
+        <Image
+          className="relative w-full"
+          src={imagesrc}
+          alt="Next.js Logo"
+          width={300}
+          height={100}
+          priority
+        />
+      </div>
+    </div>
   );
 };
 
