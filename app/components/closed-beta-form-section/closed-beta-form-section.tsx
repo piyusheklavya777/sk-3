@@ -28,17 +28,18 @@ const BetaRegistrationForm: React.FC = () => {
   return (
     <div
       id="closed-beta-form-section-92403y980"
-      className={`flex flex-col items-center justify-start gap-y-5 p-4 rounded-[16px] border-t-2 border-[#c2bdff]/60 bg-gradient-to-b from-[#03011c] to-transparent`}
+      //   className="flex flex-col items-center justify-start gap-y-5 p-4 rounded-[16px] border-t-2 border-[#c2bdff]/60 bg-gradient-to-b from-[#03011c] to-transparent"
+      className="flex flex-col items-center justify-start gap-y-5 p-4 rounded-[16px] border-t-2 border-[#d4d4ff]/80 bg-gradient-to-b from-black to-transparent"
     >
       <input
         type="text"
         placeholder="email"
-        className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#c2bdff]/60 text-[#c2bdff]/70 placeholder:text-[#c2bdff]/40 placeholder:italic font-lato p-2 outline-none bg-black/30"
+        className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#d4d4ff]/80 text-[#c2bdff]/70 placeholder:text-gray-400/40 placeholder:font-lato font-lato p-2 outline-none bg-black/30"
       />
       <input
         type="text"
         placeholder="discord handle e.g. username#1234"
-        className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#c2bdff]/60 text-[#c2bdff]/70 placeholder:text-[#c2bdff]/40 placeholder:italic font-lato p-2 outline-none bg-black/30"
+        className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#d4d4ff]/80 text-[#c2bdff]/70 placeholder:text-gray-400/40 placeholder:font-lato font-lato p-2 outline-none bg-black/30"
       />
       {/* code for a multiselect */}
       <div id="separator-76345748" className="flex-none w-full h-[80px]"></div>

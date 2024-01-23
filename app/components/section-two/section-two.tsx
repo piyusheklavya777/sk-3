@@ -48,7 +48,7 @@ export const SectionTwo: React.FC = () => {
   return (
     <div
       id="SectionTwo"
-      className="mx-[5%] flex flex-col items-center justify-start gap-y-10"
+      className="flex flex-col items-center justify-start gap-y-10"
     >
       <div
         id="section-two-title-text-outer-box-92746523"
@@ -88,7 +88,11 @@ const RhinoGrid: React.FC = () => {
   return (
     <div
       id="Rhino-grid-cont-82749505"
-      className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10"
+      className="px-[5%] grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10" // bg-gradient-to-b from-transparent via-[#040512] via-[#040512] via-[#040512] to-transparent "
+      style={{
+        background:
+          "linear-gradient(to bottom, transparent, #040512 20%, #040512 80%, transparent)",
+      }}
     >
       {Cards.map((card, index) => (
         <motion.div
@@ -141,13 +145,13 @@ const FeaturesCard: React.FC<{
         <h3 className="text-white text-4xl font-poppins font-bold uppercase tracking-widest p-2">
           {title}
         </h3>
-        <div
-          id="line-separator-89g4u5gpuo894"
-          className="flex-none h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"
-        ></div>
       </div>
+      <div
+          id="line-separator-89g4u5gpuo894"
+          className="flex-none w-full h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"
+        ></div>
       <div id="description-text-56574234" className="flex-none">
-        <h3 className="text-white text-lg font-lato tracking-widest p-2 text-center">
+        <h3 className="text-white/70 text-md font-lato tracking-wide p-2 text-center">
           {description}
         </h3>
       </div>

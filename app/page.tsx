@@ -96,10 +96,10 @@ const NavBar: React.FC = () => {
       <div></div>
       <div id="signup-cta-wh65434" className="flex justify-end items-center">
         <p
-          className="text-white/80 font-bold p-2 mx-[20px] my-[10px] text-nowrap text-sm font-poppins tracking-widest border-2 border-white/50 rounded-[5px] cursor-pointer"
+          className="text-white font-bold px-2 py-1 mx-[20px] my-[15px] text-nowrap text-sm font-poppins tracking-widest border-2 border-white/80 rounded-[5px] cursor-pointer hover:bg-white hover:text-black transition duration-300 ease-in-out"
           onClick={handleScroll}
         >
-          SIGN UP
+          JOIN
         </p>
       </div>
     </div>
