@@ -9,7 +9,7 @@ const Cards = [
     // imagesrc: "/text-p2rr.png",
     imagesrc: "/features-3-p2rr.png",
     points: [
-      "Convert your game time into crypto earnings. Exclusive offers for top players.",
+      "Convert your game time into crypto earnings. Exclusive benefits for top ranked players in closed Beta",
       // old
       "Earn in-app currency with matches and tournaments",
       "Redeem unique in-game items with the currency",
@@ -21,7 +21,7 @@ const Cards = [
     // imagesrc: "/text-leaderboard.png",
     imagesrc: "/features-2-leaderboard.png",
     points: [
-      "AI based tracking with game specific reward system🔥",
+      "AI based tracking with game specific reward system",
       // old
       "AI based tracking with game specific reward system",
       "Performace based rewards",
@@ -34,7 +34,7 @@ const Cards = [
     // imagesrc: "/text-1v1anyone.png",
     imagesrc: "/features-1-1v1.png",
     points: [
-      "Challenge anyone with one click from any leaderboard",
+      "Challenge anyone with one click from our range of dynamic leaderboards",
       // old
       "Play 1v1 matches with anyone",
       "Challenge for quick duels",

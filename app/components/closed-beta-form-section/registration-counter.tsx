@@ -31,7 +31,7 @@ export const RegistrationsCounter: React.FC = () => {
     >
       <p
         id="closed-beta-registrations-counter-text-8273645"
-        className="text-gray-200 font-lato tracking-widest text-4xl lg:text-6xl"
+        className="text-gray-200 font-lato tracking-widest text-6xl lg:text-6xl"
       >
         <CountUp end={count} redraw={true} suffix="+" />
       </p>
@@ -41,7 +41,7 @@ export const RegistrationsCounter: React.FC = () => {
       ></div>
       <p
         id="closed-beta-registrations-counter-text-8273645"
-        className="text-[#c2bdff] font-lato tracking-widest text-3xl lg:text-3xl"
+        className="text-[#c2bdff] font-lato tracking-widest text-xl lg:text-3xl"
       >
         REGISTRATIONS
       </p>
