@@ -5,6 +5,7 @@ import Image from "next/image";
 import GAMES_LIST from "./games-list.json";
 import { useMediaQuery } from "react-responsive";
 import { registerInterest } from "@/app/utilities/vercel-db-utils";
+import { set } from "lodash";
 
 export const BetaRegistrationForm: React.FC = () => {
   // create a state for the selected games
@@ -67,8 +68,17 @@ export const BetaRegistrationForm: React.FC = () => {
         selectedGames,
       });
 
+      setEmail("");
+      setDiscordHandle("");
+      setGamesList(
+        GAMES_LIST.filter((e) => e.type === "stroke").map((e) => ({
+          ...e,
+          selected: false,
+        }))
+      );
+
       console.log("API response:", response);
-      alert("Registration successful!");
+      //   alert("Registration successful!");
     } catch (error) {
       console.error("API call failed:", error);
       alert("Failed to submit registration. Please try again.");
