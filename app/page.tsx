@@ -6,6 +6,7 @@ import { SectionFAQ } from "./components/section-three/section-faq";
 import { ClosedBetaSection } from "./components/closed-beta-form-section/closed-beta-form-section";
 import Image from "next/image";
 import { BenefitsSection } from "./components/section-benefits/benefits";
+import { Footer } from "./components/footer/footer";
 
 export default function Home() {
   return (
@@ -83,14 +84,7 @@ export default function Home() {
   );
 }
 
-const Footer: React.FC = () => {
-  return (
-    <div
-      id="footer-cont-9268473"
-      className="w-full h-[100px] lg:h-[200px] bg-[#242424]/80"
-    ></div>
-  );
-};
+
 
 const NavBar: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });

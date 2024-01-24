@@ -62,6 +62,7 @@ export const JoinDiscordButton: React.FC = () => {
       <div
         id="Join-discord-btn-cont-flex-74867"
         className="flex items-center justify-center gap-x-2"
+        onClick={() => alert("Due to an attempted phishing attack on our company discord account our server has been restricted. We are currently working with discord to resolve this issue and return full access soon. @Sada VGK")}
       >
         <Image
           className="relative z-10"
