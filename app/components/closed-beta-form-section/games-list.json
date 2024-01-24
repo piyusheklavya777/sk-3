@@ -5,7 +5,7 @@
       "type": "image"
     },
     {
-      "machinename": "csgo_stroke",
+      "machinename": "csgo",
       "imagesrc": "/GAME_CARDS_NEW/gc-1-csgo_stroke.png",
       "type": "stroke"
     },
@@ -15,7 +15,7 @@
       "type": "image"
     },
     {
-      "machinename": "roguecompany_stroke",
+      "machinename": "roguecompany",
       "imagesrc": "/GAME_CARDS_NEW/gc-2-roguecompany_stroke.png",
       "type": "stroke"
     },
@@ -25,7 +25,7 @@
       "type": "image"
     },
     {
-      "machinename": "callofduty_stroke",
+      "machinename": "callofduty",
       "imagesrc": "/GAME_CARDS_NEW/gc-3-callofduty_stroke.png",
       "type": "stroke"
     },
@@ -35,7 +35,7 @@
       "type": "image"
     },
     {
-      "machinename": "rainbowsix_stroke",
+      "machinename": "rainbowsix",
       "imagesrc": "/GAME_CARDS_NEW/gc-4-rainbowsix_stroke.png",
       "type": "stroke"
     },
@@ -45,7 +45,7 @@
       "type": "image"
     },
     {
-      "machinename": "destiny_stroke",
+      "machinename": "destiny",
       "imagesrc": "/GAME_CARDS_NEW/gc-5-destiny_stroke.png",
       "type": "stroke"
     },
@@ -55,7 +55,7 @@
       "type": "image"
     },
     {
-      "machinename": "warframe_stroke",
+      "machinename": "warframe",
       "imagesrc": "/GAME_CARDS_NEW/gc-6-warframe_stroke.png",
       "type": "stroke"
     },
@@ -65,7 +65,7 @@
       "type": "image"
     },
     {
-      "machinename": "halo_stroke",
+      "machinename": "halo",
       "imagesrc": "/GAME_CARDS_NEW/gc-7-halo_stroke.png",
       "type": "stroke"
     },
@@ -75,7 +75,7 @@
       "type": "image"
     },
     {
-      "machinename": "escapefromtarkov_stroke",
+      "machinename": "escapefromtarkov",
       "imagesrc": "/GAME_CARDS_NEW/gc-8-escapefromtarkov_stroke.png",
       "type": "stroke"
     },
@@ -85,7 +85,7 @@
       "type": "image"
     },
     {
-      "machinename": "overwatch_stroke",
+      "machinename": "overwatch",
       "imagesrc": "/GAME_CARDS_NEW/gc-9-overwatch_stroke.png",
       "type": "stroke"
     },
@@ -95,7 +95,7 @@
       "type": "image"
     },
     {
-      "machinename": "arenaofvalor_stroke",
+      "machinename": "arenaofvalor",
       "imagesrc": "/GAME_CARDS_NEW/gc-10-arenaofvalor_stroke.png",
       "type": "stroke"
     },
@@ -105,7 +105,7 @@
       "type": "stroke"
     },
     {
-      "machinename": "paladins_image",
+      "machinename": "paladins",
       "imagesrc": "/GAME_CARDS_NEW/gc-11-paladins_image.png",
       "type": "image"
     },
@@ -115,7 +115,7 @@
       "type": "image"
     },
     {
-      "machinename": "valorant_stroke",
+      "machinename": "valorant",
       "imagesrc": "/GAME_CARDS_NEW/gc-12-valorant_stroke.png",
       "type": "stroke"
     }

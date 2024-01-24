@@ -150,67 +150,67 @@ export const BlurredCard: React.FC = () => {
   );
 };
 
-export const YakCarousel: React.FC = () => {
-  const { scrollContainerRef } = useAutoScroll({
-    scrollInterval: 1200,
-    totalItems: 8,
-    scrollDistance: 150,
-    scrollDirection: "horizontal",
-  });
+// export const YakCarousel: React.FC = () => {
+//   const { scrollContainerRef } = useAutoScroll({
+//     scrollInterval: 1200,
+//     totalItems: 8,
+//     scrollDistance: 150,
+//     scrollDirection: "horizontal",
+//   });
 
-  return (
-    <motion.div
-      ref={scrollContainerRef}
-      // animate={controls}
-      id="game-cards-carousel-cont"
-      className="relative flex items-center justify-start gap-x-[20px] overflow-x-auto whitespace-nowrap p-2"
-    >
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-1-csgo.png" />
-      </div>
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-2-rainbow.png" />
-      </div>
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-3-valorant.png" />
-      </div>
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-4-tarkove.png" />
-      </div>
-      {/* duplicate set */}
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-1-csgo.png" />
-      </div>
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-2-rainbow.png" />
-      </div>
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-3-valorant.png" />
-      </div>
-      <div id="game-cards-clr-4308462" className="flex-none">
-        <ZebraCard imagesrc="/gc-4-tarkove.png" />
-      </div>
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       ref={scrollContainerRef}
+//       // animate={controls}
+//       id="game-cards-carousel-cont"
+//       className="relative flex items-center justify-start gap-x-[20px] overflow-x-auto whitespace-nowrap p-2"
+//     >
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-1-csgo.png" />
+//       </div>
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-2-rainbow.png" />
+//       </div>
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-3-valorant.png" />
+//       </div>
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-4-tarkove.png" />
+//       </div>
+//       {/* duplicate set */}
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-1-csgo.png" />
+//       </div>
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-2-rainbow.png" />
+//       </div>
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-3-valorant.png" />
+//       </div>
+//       <div id="game-cards-clr-4308462" className="flex-none">
+//         <ZebraCard imagesrc="/gc-4-tarkove.png" />
+//       </div>
+//     </motion.div>
+//   );
+// };
 
-export const ZebraCard: React.FC<{ imagesrc: string }> = ({ imagesrc }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
-  return (
-    <div
-      id="zebra-card-cont"
-      className="inline-block w-[120px] lg:w-[180px] py-10 rounded-[5px] hover:scale-150 transition duration-200 ease-in"
-    >
-      <div id="image" className="">
-        <Image
-          src={imagesrc}
-          alt="Logo"
-          layout="responsive"
-          width={100}
-          height={200}
-          priority
-        />
-      </div>
-    </div>
-  );
-};
+// export const ZebraCard: React.FC<{ imagesrc: string }> = ({ imagesrc }) => {
+//   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+//   return (
+//     <div
+//       id="zebra-card-cont"
+//       className="inline-block w-[120px] lg:w-[180px] py-10 rounded-[5px] hover:scale-150 transition duration-200 ease-in"
+//     >
+//       <div id="image" className="">
+//         <Image
+//           src={imagesrc}
+//           alt="Logo"
+//           layout="responsive"
+//           width={100}
+//           height={200}
+//           priority
+//         />
+//       </div>
+//     </div>
+//   );
+// };
