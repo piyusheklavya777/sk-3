@@ -110,8 +110,9 @@ export const BetaRegistrationForm: React.FC = () => {
         id="select-games-title-cont"
         className="w-full inline-flex js ic pl-1"
       >
-        <h1 className="text-[#d4d4ff]/70 font-lato text-sm">
-          Select your games
+        {/* <h1 className="text-[#d4d4ff]/70 font-lato text-sm"> */}
+        <h1 className="text-yellow-100 font-lato font-bold text-sm">
+          Click to select your games
         </h1>
       </div>
       <SelectGamesGrid gameList={gamesList} setGameList={setGamesList} />
@@ -200,7 +201,7 @@ const SelectGamesGrid: React.FC<{
                   }}
                 >
                   <Image
-                    className="relative z-10"
+                    className="relative z-10 cursor-pointer"
                     src={e.imagesrc}
                     alt="Next.js Logo"
                     width={isMobile ? 100 : 90}
@@ -210,7 +211,7 @@ const SelectGamesGrid: React.FC<{
                   {e.selected && (
                     <div
                       id="each-game-selected-mask"
-                      className="absolute z-20 inset-0 flex items-center justify-center bg-black/80"
+                      className="absolute z-20 inset-0 flex items-center justify-center bg-black/80 cursor-pointer"
                     >
                       <span className="material-symbols-outlined text-4xl text-green-700/60">
                         check_circle
