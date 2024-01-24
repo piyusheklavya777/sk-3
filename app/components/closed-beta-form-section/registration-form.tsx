@@ -4,7 +4,7 @@ import Image from "next/image";
 
 import GAMES_LIST from "./games-list.json";
 import { useMediaQuery } from "react-responsive";
-import { RestClient } from "@/app/utilities/rest-client";
+import { registerInterest } from "@/app/utilities/vercel-db-utils";
 
 export const BetaRegistrationForm: React.FC = () => {
   // create a state for the selected games
@@ -61,14 +61,10 @@ export const BetaRegistrationForm: React.FC = () => {
 
     // API call
     try {
-      const response = await RestClient({
-        url: "https://sheetdb.io/api/v1/38om56plpsfsy", // Replace with your actual API endpoint
-        method: "POST",
-        data: {
-          email,
-          discordHandle,
-          selectedGames,
-        },
+      const response = await registerInterest({
+        email,
+        discordHandle,
+        selectedGames,
       });
 
       console.log("API response:", response);

@@ -3,19 +3,17 @@ import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 
 export const RegistrationsCounter: React.FC = () => {
-  const [count, setUpdateKey] = useState(0);
+  const [count, setUpdateKey] = useState<number>(44906);
 
   const refreshCount = async () => {
     const newCount = await getInterestsCount();
-    setUpdateKey(() => newCount);
+    setUpdateKey(() => Number(44906 + Number(newCount)));
   };
 
   useEffect(() => {
     const interval = setInterval(() => {
-        refreshCount();
-      // Update the key to trigger a re-render
-      //   setUpdateKey((prevKey) => prevKey + 1);
-    }, 5000); // 10 seconds interval
+      refreshCount();
+    }, 5000); // 5 seconds interval
 
     return () => clearInterval(interval);
   }, []);
@@ -29,7 +27,7 @@ export const RegistrationsCounter: React.FC = () => {
         id="closed-beta-registrations-counter-text-8273645"
         className="text-gray-200 font-lato tracking-widest text-4xl lg:text-6xl"
       >
-        <CountUp end={44906 + count} redraw={true} suffix="+" />
+        <CountUp end={count} redraw={true} suffix="+" />
       </p>
       <div
         id="separator-76345748"
