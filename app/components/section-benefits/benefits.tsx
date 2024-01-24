@@ -1,4 +1,4 @@
-import { LottieAnimation } from "@/app/utilities/lottie-react-wrapper";
+import { LottieAnimation } from "@/app/atoms/lottie-react-wrapper";
 
 import gamenetworkinglottie from "./game-networking-lottie.json";
 

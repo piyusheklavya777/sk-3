@@ -1,0 +1,122 @@
+[
+    {
+      "machinename": "csgo",
+      "imagesrc": "/GAME_CARDS_NEW/gc-1-csgo_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "csgo_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-1-csgo_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "roguecompany",
+      "imagesrc": "/GAME_CARDS_NEW/gc-2-roguecompany_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "roguecompany_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-2-roguecompany_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "callofduty",
+      "imagesrc": "/GAME_CARDS_NEW/gc-3-callofduty_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "callofduty_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-3-callofduty_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "rainbowsix",
+      "imagesrc": "/GAME_CARDS_NEW/gc-4-rainbowsix_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "rainbowsix_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-4-rainbowsix_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "destiny",
+      "imagesrc": "/GAME_CARDS_NEW/gc-5-destiny_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "destiny_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-5-destiny_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "warframe",
+      "imagesrc": "/GAME_CARDS_NEW/gc-6-warframe_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "warframe_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-6-warframe_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "halo",
+      "imagesrc": "/GAME_CARDS_NEW/gc-7-halo_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "halo_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-7-halo_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "escapefromtarkov",
+      "imagesrc": "/GAME_CARDS_NEW/gc-8-escapefromtarkov_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "escapefromtarkov_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-8-escapefromtarkov_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "overwatch",
+      "imagesrc": "/GAME_CARDS_NEW/gc-9-overwatch_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "overwatch_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-9-overwatch_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "arenaofvalor",
+      "imagesrc": "/GAME_CARDS_NEW/gc-10-arenaofvalor_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "arenaofvalor_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-10-arenaofvalor_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "paladins",
+      "imagesrc": "/GAME_CARDS_NEW/gc-11-paladins_stroke.png",
+      "type": "stroke"
+    },
+    {
+      "machinename": "paladins_image",
+      "imagesrc": "/GAME_CARDS_NEW/gc-11-paladins_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "valorant",
+      "imagesrc": "/GAME_CARDS_NEW/gc-12-valorant_image.png",
+      "type": "image"
+    },
+    {
+      "machinename": "valorant_stroke",
+      "imagesrc": "/GAME_CARDS_NEW/gc-12-valorant_stroke.png",
+      "type": "stroke"
+    }
+  ]
