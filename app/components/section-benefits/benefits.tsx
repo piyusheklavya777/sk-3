@@ -2,6 +2,8 @@ import { LottieAnimation } from "@/app/utilities/lottie-react-wrapper";
 
 import gamenetworkinglottie from "./game-networking-lottie.json";
 
+import walletlottie from "./wallet-lottie.json";
+
 export const BenefitsSection: React.FC = () => {
   return (
     <div id="section-benefits-23497" className="w-full">
@@ -11,6 +13,9 @@ export const BenefitsSection: React.FC = () => {
       >
         <div id="networking-slide-cont-234097" className="flex-none">
           <NetworkingSlide />
+        </div>
+        <div id="networking-slide-cont-234097" className="flex-none">
+          <WalletSlide />
         </div>
       </div>
     </div>
@@ -36,13 +41,43 @@ const NetworkingSlide: React.FC = () => {
           id="networking-slide-title-234097"
           className="text-6xl font-poppins text-[rgba(255,255,255,1)]"
         >
-          Brands and Networking
+          Networking for brands
         </h2>
         <p
           id="networking-slide-description-234097"
-          className="flex-none font-lato text-xl text-[rgba(224,243,255,0.8)] w-[70%]"
+          className="flex-none font-lato text-xl text-[rgba(224,243,255,0.8)] w-[70o%]"
         >
-          Reach engaged gamers through the ScoreKount Network
+          reach engaged gamers through the ScoreKount Network
+        </p>
+      </div>
+    </div>
+  );
+};
+
+const WalletSlide: React.FC = () => {
+  return (
+    <div
+      id="networking-slide-234097"
+      className="flex flex-col lg:flex-row-reverse items-center justify-between"
+    >
+      <div id="networking-slide-image-234097" className="flex-none">
+        <LottieAnimation lottiejsonfile={walletlottie} />
+      </div>
+      <div
+        id="networking-slide-content-234097"
+        className="flex flex-col jb ie gap-y-5 px-5"
+      >
+        <h2
+          id="networking-slide-title-234097"
+          className="text-[52px] leading-tight font-poppins text-[rgba(255,255,255,1)] text-right"
+        >
+          Engagement for games
+        </h2>
+        <p
+          id="networking-slide-description-234097"
+          className="flex-none font-lato text-xl text-[rgba(224,243,255,0.8)] w-[7k0%] text-right"
+        >
+          engage players through wallets with exciting in-game brand activation
         </p>
       </div>
     </div>
