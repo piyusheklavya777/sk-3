@@ -7,14 +7,6 @@ import { useEffect } from "react";
 import { useAutoScroll } from "@/app/utility-hooks/auto-scroll-hoook";
 
 export const SectionOne: React.FC = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
-  const handleScroll = () => {
-    // Calculate 20vh from the current scroll position
-    window.scrollTo({
-      top: window.innerHeight * (isMobile ? 0.65 : 0.9),
-      behavior: "smooth",
-    });
-  };
   return (
     <div
       id="section-one-cont-425329842"
@@ -33,24 +25,8 @@ export const SectionOne: React.FC = () => {
           </div>
         </div>
       </div>
-      <div
-        id="scroll-down-arrow-container"
-        className="z-30 relative m-[10px] cursor-pointer"
-        onClick={handleScroll}
-      >
-        <motion.p
-          animate={{ y: [0, 20, 0] }} // Moves down 15px and back up
-          transition={{
-            duration: 1.5, // Duration of one cycle
-            ease: "easeInOut",
-            repeat: Infinity,
-            repeatType: "reverse",
-          }}
-          id="scroll-down-g97yrwv"
-          className="material-symbols-outlined text-white text-xl lg:text-4xl"
-        >
-          expand_more
-        </motion.p>
+      <div id="scroll-down-arrow-clr-8644532" className="flex-none z-30 relative m-[10px] ">
+        <ScrollDownArrow />
       </div>
       <div
         id="body-bkg-video-29458548"
@@ -66,6 +42,38 @@ export const SectionOne: React.FC = () => {
         id="body-bkg-top-fade-into-blue-29765972"
         className="z-20 absolute inset-x-0 top-0 h-[30%] bg-cover bg-center bg-gradient-to-b from-[rgba(0,0,40,1)] to-transparent"
       ></div>
+    </div>
+  );
+};
+
+const ScrollDownArrow = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+  const handleScroll = () => {
+    // Calculate 20vh from the current scroll position
+    window.scrollTo({
+      top: window.innerHeight * (isMobile ? 0.65 : 0.9),
+      behavior: "smooth",
+    });
+  };
+  return (
+    <div
+      id="scroll-down-arrow-container"
+      className="cursor-pointer"
+      onClick={handleScroll}
+    >
+      <motion.p
+        animate={{ y: [0, 20, 0] }} // Moves down 15px and back up
+        transition={{
+          duration: 1.5, // Duration of one cycle
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "reverse",
+        }}
+        id="scroll-down-g97yrwv"
+        className="material-symbols-outlined text-white text-xl lg:text-4xl"
+      >
+        expand_more
+      </motion.p>
     </div>
   );
 };
@@ -134,8 +142,7 @@ export const BlurredCard: React.FC = () => {
         id="hero-text-9vbyrw"
         className="p-2 text-xl lg:text-4xl text-white font-lato font-bold tracking-widest leading-loose text-wrap"
       >
-        Encash your actual game time from your favourite games into redeemable
-        rewards
+        monetize your game timemonetize your game timemonetize your game timemonetize your game time
       </p>
     </div>
   );
