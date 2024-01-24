@@ -7,10 +7,11 @@ import { useEffect } from "react";
 import { useAutoScroll } from "@/app/utility-hooks/auto-scroll-hoook";
 
 export const SectionOne: React.FC = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   const handleScroll = () => {
     // Calculate 20vh from the current scroll position
     window.scrollTo({
-      top: window.innerHeight * 0.8 + window.scrollY,
+      top: window.innerHeight * (isMobile ? 0.65 : 0.9),
       behavior: "smooth",
     });
   };
@@ -133,7 +134,7 @@ export const BlurredCard: React.FC = () => {
         id="hero-text-9vbyrw"
         className="p-2 text-xl lg:text-4xl text-white font-lato font-bold tracking-widest leading-loose text-wrap"
       >
-        Cash your actual game time from your favourite games into redeemable
+        Encash your actual game time from your favourite games into redeemable
         rewards
       </p>
     </div>

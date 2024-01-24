@@ -75,3 +75,35 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   
 }
+
+
+/* animations */
+
+.anim-shiny-patch-travels-across {
+  position: relative;
+  overflow: hidden;
+}
+
+.anim-shiny-patch-travels-across::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 15%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Shiny and translucent */
+  transform: skew(-30deg); /* 30-degree tilt */
+  animation: shiny-patch-travel 3s linear infinite;
+}
+
+@keyframes shiny-patch-travel {
+  0% {
+    left: -30%;
+  }
+  20% {
+    left: 180%;
+  }
+  100% {
+    left: 180%;
+  }
+}
