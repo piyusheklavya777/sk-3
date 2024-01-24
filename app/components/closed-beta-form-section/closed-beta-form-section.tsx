@@ -292,11 +292,12 @@ const SelectGamesGrid: React.FC<{
         >
           {gameList
             .filter((game) => game.type === "stroke")
-            .map((e) => {
+            .map((e, i) => {
               return (
                 <div
                   id="select-game-1"
                   className="flex-none relative"
+                    key={i}
                   onClick={() => {
                     setGameList((prev) => {
                       return prev.map((prevGame) => {
