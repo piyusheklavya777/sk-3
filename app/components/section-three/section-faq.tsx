@@ -10,11 +10,11 @@ export const SectionFAQ: React.FC = () => {
         id="faq-section-title-text-92746523"
         className="flex-none text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest bg-black/50 p-10 rounded-lg"
       >
-        What people are getting{" "}
-        <span className="text-red-500 text-5xl underline cursor-pointer">
+        Questions? We&apos;ve got answers{" "}
+        {/* <span className="text-red-500 text-5xl underline cursor-pointer">
           curious
-        </span>{" "}
-        about.. . . .
+        </span>{" "} */}
+        {/* .. . . . */}
       </p>
       <div id="faq-cards-clr-cont-64264564" className="flex-none mx-0">
         <FAQCardsFlexBox />

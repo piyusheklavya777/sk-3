@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import CountUp from "react-countup";
 import { useMediaQuery } from "react-responsive";
 
 const theme = {
@@ -21,7 +22,7 @@ export const ClosedBetaSection: React.FC = () => {
     >
       <div id="closed-beta-title-cont-895423vfe" className="flex-none">
         {/* <h1 className=" font-lato text-lg lg:text-4xl bg-clip-to-text bg-gradiento-to-b from-transparent via-white to-transparent"> */}
-        <h1 className=" font-lato text-lg text-[#c2bdff]/90">
+        <h1 className=" font-lato text-lg text-[#c2bdff]/90 tracking-widest">
           ACCEPTING INTERESTS NOW
         </h1>
       </div>
@@ -219,7 +220,7 @@ const BetaRegistrationForm: React.FC = () => {
     <div
       id="closed-beta-form-section-92403y980"
       //   className="flex flex-col items-center justify-start gap-y-5 p-4 rounded-[16px] border-t-2 border-[#c2bdff]/60 bg-gradient-to-b from-[#03011c] to-transparent"
-      className="flex flex-col items-center justify-start gap-y-2 px-4 pt-4 rounded-[16px] border-t-2 border-[#d4d4ff]/80 bg-gradient-to-b from-black to-transparent anim-shiny-patch-travels-across z-10"
+      className="flex flex-col items-center justify-start gap-y-2 px-4 pt-4 rounded-[16px] border-t-2 border-[#d4d4ff]/80 bg-gradient-to-b from-[#050552]- from-[#020229] to-transparent anim-shiny-patch-travels-across z-10"
     >
       <input
         type="text"
@@ -351,7 +352,7 @@ const SelectGamesGrid: React.FC<{
   );
 };
 
-const RegistrationsCounter: React.FC = () => {
+const RegistrationsCounterf: React.FC = () => {
   return (
     <div
       id="closed-beta-registrations-counter-8273645"
@@ -361,7 +362,55 @@ const RegistrationsCounter: React.FC = () => {
         id="closed-beta-registrations-counter-text-8273645"
         className="text-gray-200 font-lato tracking-widest text-4xl lg:text-6xl"
       >
-        44,906+
+        <CountUp end={44906} />+
+      </p>
+      <div
+        id="separator-76345748"
+        className="flex-none w-full h-[2px] bg-gradient-to-r from-transparent via-[#c2bdff] to-transparent"
+      ></div>
+      <p
+        id="closed-beta-registrations-counter-text-8273645"
+        className="text-[#c2bdff] font-lato tracking-widest text-3xl lg:text-3xl"
+      >
+        REGISTRATIONS
+      </p>
+    </div>
+  );
+};
+
+const RegistrationsCounter: React.FC = () => {
+  return (
+    <div
+      id="closed-beta-registrations-counter-8273645"
+      className="flex flex-col items-center justify-start gap-y-2 p-4 rounded-[16px]"
+    >
+      <p id="closed-beta-registrations-counter-text-8273645">
+        <CountUp
+          // start={-875.039}
+          end={44906}
+          duration={4}
+          separator=""
+          // decimals={4}
+          // decimal=","
+          // prefix="EUR "
+          suffix="+"
+          // onEnd={() => console.log("Ended! 👏")}
+          // onStart={() => console.log("Started! 💨")}
+        >
+          {({ countUpRef, start }) => {
+            // count after every 5s
+
+            return (
+              <div>
+                <span
+                  ref={countUpRef}
+                  className="text-gray-200 font-lato tracking-widest text-4xl lg:text-6xl"
+                />
+                {/* <button onClick={start}>Start</button> */}
+              </div>
+            );
+          }}
+        </CountUp>
       </p>
       <div
         id="separator-76345748"

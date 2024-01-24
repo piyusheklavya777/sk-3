@@ -41,13 +41,13 @@ const NetworkingSlide: React.FC = () => {
           id="networking-slide-title-234097"
           className="text-6xl font-poppins text-[rgba(255,255,255,1)]"
         >
-          Networking for brands
+          Outreach for Brands
         </h2>
         <p
           id="networking-slide-description-234097"
           className="flex-none font-lato text-xl text-[rgba(224,243,255,0.8)] w-[70o%]"
         >
-          reach engaged gamers through the ScoreKount Network
+          reach engaged gamers through the ScoreKount network
         </p>
       </div>
     </div>
@@ -71,7 +71,7 @@ const WalletSlide: React.FC = () => {
           id="networking-slide-title-234097"
           className="text-[52px] leading-tight font-poppins text-[rgba(255,255,255,1)] text-right"
         >
-          Engagement for games
+          Engagement for Games
         </h2>
         <p
           id="networking-slide-description-234097"

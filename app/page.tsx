@@ -9,11 +9,15 @@ import { BenefitsSection } from "./components/section-benefits/benefits";
 
 export default function Home() {
   return (
-    <div id="body" className=" cust-body-bkg relative">
+    <div id="body" className=" cust-body-bkg-black relative">
       <div
         id="body-pattern-29638264"
-        className="z-20 absolute inset-0 bg-opacity-50 opacity-40"
+        className="z-40 h-[200vh] cust-body-bkg-blue absolute top-0 bg-opacity-50 opacity-40"
       ></div>
+      {/* <div
+        id="body-pattern-29638264"
+        className="z-20 absolute inset-0 bg-opacity-50 opacity-40"
+      ></div> */}
       {/* <div
         id="body-bkg-video-29458548"
         className="z-10 absolute inset-0 bg-cover bg-center overflow-hidden"
@@ -36,22 +40,34 @@ export default function Home() {
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col items-center justify-between"
       >
-        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
+        <div
+          id="vertical-separator-252njg4trw"
+          className="flex-none h-[20px]"
+        ></div>
         <div id="section-1-container" className="flex-none w-full">
           <SectionOne />
         </div>
         <div id="join-closed-beta-section" className="flex-none pt-4">
           <ClosedBetaSection />
         </div>
-        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
+        <div
+          id="vertical-separator-252njg4trw"
+          className="flex-none h-[20px]"
+        ></div>
         <div id="section-2-container" className="flex-none">
           <SectionTwo />
         </div>
-        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
+        <div
+          id="vertical-separator-252njg4trw"
+          className="flex-none h-[20px]"
+        ></div>
         <div id="section-graphics-8037145" className="flex-none">
           <BenefitsSection />
         </div>
-        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
+        <div
+          id="vertical-separator-252njg4trw"
+          className="flex-none h-[20px]"
+        ></div>
         <div id="section-3-container" className="flex-none">
           <SectionFAQ />
         </div>
@@ -71,7 +87,7 @@ const Footer: React.FC = () => {
   return (
     <div
       id="footer-cont-9268473"
-      className="w-full h-[100px] lg:h-[200px] bg-[#020215]/80"
+      className="w-full h-[100px] lg:h-[200px] bg-[#242424]/80"
     ></div>
   );
 };

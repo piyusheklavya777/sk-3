@@ -52,13 +52,14 @@ export const SectionTwo: React.FC = () => {
     >
       <div
         id="section-two-title-text-outer-box-92746523"
-        className="flex-none bg-black/50 p-20 rounded-lg"
+        className="flex-none p-5 rounded-lg"
       >
         <p
           id="section-two-title-text-inner-box-92746523"
-          className=" text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest border-l border-b-4 border-gray-300 rounded-bl-md p-3"
+          // className=" text-3xl lg:text-4xl text-white font-poppins font-normal tracking-widest border-l border-b-4 border-gray-300 rounded-bl-md p-3"
+          className="text-4xl lg:text-6xl text-white font-poppins font-normal tracking-widest p-3"
         >
-          <span className="text-cyan-300">ScoreKount</span> brings to you.. . .
+          Come Explore
         </p>
       </div>
       <div id="grid-wrapper-6457834993" className="flex-none">
@@ -147,9 +148,9 @@ const FeaturesCard: React.FC<{
         </h3>
       </div>
       <div
-          id="line-separator-89g4u5gpuo894"
-          className="flex-none w-full h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"
-        ></div>
+        id="line-separator-89g4u5gpuo894"
+        className="flex-none w-full h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"
+      ></div>
       <div id="description-text-56574234" className="flex-none">
         <h3 className="text-white/70 text-md font-lato tracking-wide p-2 text-center">
           {description}
