@@ -57,6 +57,9 @@ body {
   .js {
     justify-content: start;
   }
+  .jb {
+    justify-content: space-between;
+  }
 }
 
 .cust-body-bkg {

@@ -10,7 +10,7 @@ export const SectionOne: React.FC = () => {
   return (
     <div
       id="section-one-cont-425329842"
-      className=" h-[70vh] lg:h-[100vh] w-[100%] relative text-wrap flex flex-col items-center justify-start"
+      className=" h-[70vh] lg:h-[100vh] w-full relative text-wrap flex flex-col items-center justify-start"
     >
       <div
         id="blurred-card-container-4245432"
@@ -18,7 +18,7 @@ export const SectionOne: React.FC = () => {
       >
         <div className="flex-none w-full flex jc ic">
           <div
-            id="blurred-card-cont-425329842"
+            id="blurred-card-clr-425329842"
             className="relative w-[90%] lg:w-[60%] flex jc ic"
           >
             <BlurredCard />
@@ -142,7 +142,7 @@ export const BlurredCard: React.FC = () => {
         id="hero-text-9vbyrw"
         className="p-2 text-xl lg:text-4xl text-white font-lato font-bold tracking-widest leading-loose text-wrap"
       >
-        monetize your game timemonetize your game timemonetize your game timemonetize your game time
+        monetize your game time
       </p>
     </div>
   );

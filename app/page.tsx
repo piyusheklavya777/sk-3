@@ -5,6 +5,7 @@ import { SectionTwo } from "./components/section-two/section-two";
 import { SectionFAQ } from "./components/section-three/section-faq";
 import { ClosedBetaSection } from "./components/closed-beta-form-section/closed-beta-form-section";
 import Image from "next/image";
+import { BenefitsSection } from "./components/section-benefits/benefits";
 
 export default function Home() {
   return (
@@ -35,7 +36,7 @@ export default function Home() {
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col gap-y-10 items-center justify-between"
       >
-        <div id="section-1-container" className="flex-none">
+        <div id="section-1-container" className="flex-none w-full">
           <SectionOne />
         </div>
         <div id="join-closed-beta-section" className="flex-none">
@@ -43,6 +44,9 @@ export default function Home() {
         </div>
         <div id="section-2-container" className="flex-none">
           <SectionTwo />
+        </div>
+        <div id="section-graphics-8037145" className="flex-none">
+          <BenefitsSection />
         </div>
         <div id="section-3-container" className="flex-none">
           <SectionFAQ />
