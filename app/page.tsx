@@ -34,20 +34,24 @@ export default function Home() {
       </div> */}
       <div
         id="body-flex-box-cont-295039753"
-        className="z-30 relative flex flex-col gap-y-10 items-center justify-between"
+        className="z-30 relative flex flex-col items-center justify-between"
       >
+        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
         <div id="section-1-container" className="flex-none w-full">
           <SectionOne />
         </div>
-        <div id="join-closed-beta-section" className="flex-none">
+        <div id="join-closed-beta-section" className="flex-none pt-4">
           <ClosedBetaSection />
         </div>
+        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
         <div id="section-2-container" className="flex-none">
           <SectionTwo />
         </div>
+        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
         <div id="section-graphics-8037145" className="flex-none">
           <BenefitsSection />
         </div>
+        <div id="vertical-separator-252njg4trw" className="flex-none h-[20px]"></div>
         <div id="section-3-container" className="flex-none">
           <SectionFAQ />
         </div>

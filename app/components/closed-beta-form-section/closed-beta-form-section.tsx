@@ -15,20 +15,31 @@ const skin = "#c2bdff";
 
 export const ClosedBetaSection: React.FC = () => {
   return (
-    <div id="closed-beta-section" className="flex flex-col js ic gap-y-2">
-      <div id="beta-reg-form-caller-3645437" className="flex-none">
-        <BetaRegistrationForm />
+    <div
+      id="closed-beta-section-lnjrknjs"
+      className="flex flex-col items-center justify-center gap-y-2"
+    >
+      <div id="closed-beta-title-cont-895423vfe" className="flex-none">
+        {/* <h1 className=" font-lato text-lg lg:text-4xl bg-clip-to-text bg-gradiento-to-b from-transparent via-white to-transparent"> */}
+        <h1 className=" font-lato text-lg text-[#c2bdff]/90">
+          ACCEPTING INTERESTS NOW
+        </h1>
       </div>
       <div
-        id="separator-76345748"
-        className="flex-none w-full h-[5px]"
-      ></div>
-      <div id="join-discord-button" className="flex-none">
-        <JoinDiscordButton />
-      </div>
+        id="closed-beta-content-vnjlrwvw"
+        className="flex flex-col js ic gap-y-2"
+      >
+        <div id="beta-reg-form-caller-3645437" className="flex-none">
+          <BetaRegistrationForm />
+        </div>
+        <div id="separator-76345748" className="flex-none w-full h-[5px]"></div>
+        <div id="join-discord-button" className="flex-none">
+          <JoinDiscordButton />
+        </div>
 
-      <div id="registrations-counter" className="flex-none">
-        <RegistrationsCounter />
+        <div id="registrations-counter" className="flex-none">
+          <RegistrationsCounter />
+        </div>
       </div>
     </div>
   );
@@ -208,7 +219,7 @@ const BetaRegistrationForm: React.FC = () => {
     <div
       id="closed-beta-form-section-92403y980"
       //   className="flex flex-col items-center justify-start gap-y-5 p-4 rounded-[16px] border-t-2 border-[#c2bdff]/60 bg-gradient-to-b from-[#03011c] to-transparent"
-      className="flex flex-col items-center justify-start gap-y-2 p-4 rounded-[16px] border-t-2 border-[#d4d4ff]/80 bg-gradient-to-b from-black to-transparent anim-shiny-patch-travels-across z-10"
+      className="flex flex-col items-center justify-start gap-y-2 px-4 pt-4 rounded-[16px] border-t-2 border-[#d4d4ff]/80 bg-gradient-to-b from-black to-transparent anim-shiny-patch-travels-across z-10"
     >
       <input
         type="text"
@@ -297,7 +308,7 @@ const SelectGamesGrid: React.FC<{
                 <div
                   id="select-game-1"
                   className="flex-none relative"
-                    key={i}
+                  key={i}
                   onClick={() => {
                     setGameList((prev) => {
                       return prev.map((prevGame) => {

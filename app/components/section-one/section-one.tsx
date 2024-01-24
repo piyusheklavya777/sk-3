@@ -10,8 +10,9 @@ export const SectionOne: React.FC = () => {
   return (
     <div
       id="section-one-cont-425329842"
-      className=" h-[70vh] lg:h-[100vh] w-full relative text-wrap flex flex-col items-center justify-start"
+      className=" h-[70vh] lg:h-[100vh] w-full relative text-wrap flex flex-col items-center justify-between gap-y-1"
     >
+      {/* <div id="vertical-spacer-2y9036" className="flex-none h-[2j0px] w-full"></div> */}
       <div
         id="blurred-card-container-4245432"
         className="z-30 mt-[25%] lg:mt-[8%] relative w-full flex justify-center items-start"
@@ -28,6 +29,7 @@ export const SectionOne: React.FC = () => {
       <div id="scroll-down-arrow-clr-8644532" className="flex-none z-30 relative m-[10px] ">
         <ScrollDownArrow />
       </div>
+      {/* absolutes */}
       <div
         id="body-bkg-video-29458548"
         className="z-10 absolute inset-0 bg-cover bg-center overflow-hidden"
@@ -125,25 +127,25 @@ export const BlurredCard: React.FC = () => {
   return (
     <div
       id="blurred-card"
-      className="w-full h-full max-h-[80vh] max-w-[80%] relative rounded-[15px] p-[5%] cust-blurred-card flex flex-col lg:flex-row items-center justify-start lg:justify-between"
+      className="h-full max-h-[80vh] max-w-[80%] relative rounded-[15px] p-[5%] cust-blurred-card flex flex-col lg:flex-row items-center justify-start lg:justify-between"
     >
       <div id="title-section-clr-927645808" className="flex-none">
         <TitleBox />
       </div>
-      <div
+      {/* <div
         id="separator-24935672"
         className="flex-none w-full h-[2px] lg:w-[2px] lg:h-full bg-gradient-to-r lg:bg-gradient-to-b from-transparent via-white to-transparent"
-      ></div>
+      ></div> */}
       {/* <div id="yak-carousel-clr-927645808" className="flex-none max-w-[400px] px-4 relative bg-gradient-to-b from-transparent via-blue-900/50 to-transparent">
         <YakCarousel />
       </div> */}
 
-      <p
+      {/* <p
         id="hero-text-9vbyrw"
         className="p-2 text-xl lg:text-4xl text-white font-lato font-bold tracking-widest leading-loose text-wrap"
       >
         monetize your game time
-      </p>
+      </p> */}
     </div>
   );
 };
