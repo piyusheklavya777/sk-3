@@ -44,7 +44,7 @@ export const BetaRegistrationForm: React.FC = () => {
     // Discord handle validation
     // const discordRegex = /^.+#[0-9]{4}$/;
     if (!discordHandle) {
-      alert("Please enter a valid Discord handle (e.g., justanotherbutterchicken");
+      alert("Please enter a valid Discord handle (e.g., warriorspirit");
       return;
     }
 
@@ -102,7 +102,7 @@ export const BetaRegistrationForm: React.FC = () => {
         type="text"
         value={discordHandle}
         onChange={(e) => setDiscordHandle(e.target.value)}
-        placeholder="discord handle e.g. justanotherbutterchicken"
+        placeholder="discord handle e.g. warriorspirit"
         className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#d4d4ff]/80 text-[#c2bdff]/70 placeholder:text-[#d4d4ff]/40 placeholder:font-lato font-lato p-2 outline-none bg-black/80 z-20"
       />
       {/* code for a multiselect */}
