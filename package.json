@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tsparticles/engine": "^3.1.0",
+    "@tsparticles/react": "^3.0.0",
     "@vercel/postgres": "^0.7.2",
     "axios": "^1.6.5",
     "framer-motion": "^10.18.0",
@@ -20,7 +22,9 @@
     "react-countup": "^6.5.0",
     "react-dom": "^18",
     "react-lottie": "^1.2.4",
-    "react-responsive": "^9.0.2"
+    "react-responsive": "^9.0.2",
+    "tsparticles": "^3.1.0",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
