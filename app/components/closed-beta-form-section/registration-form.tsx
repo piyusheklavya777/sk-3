@@ -1,7 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-
+import Confetti from "react-confetti";
 import GAMES_LIST from "./games-list.json";
 import { useMediaQuery } from "react-responsive";
 import { registerInterest } from "@/app/utilities/vercel-db-utils";
@@ -23,37 +23,40 @@ export const BetaRegistrationForm: React.FC = () => {
     }))
   );
 
+  const [showConfetti, setShowConfetti] = useState<boolean>(false);
+
+  // after 5 seconds, reset the confetti to false
+  useEffect(() => {
+    if (showConfetti) {
+      setTimeout(() => {
+        setShowConfetti(false);
+      }, 5000);
+    }
+  }, [showConfetti]);
+
   const [email, setEmail] = useState("");
   const [discordHandle, setDiscordHandle] = useState("");
 
-  //   const onSumbitHandler = () => {
-  //     // validate email is correct and regex check for email
-  //     // validate discord handle is correct
-  //     // validate atleast one game is selected
-  //     // make RestClient api call to the sheet api using RestClient
-  //   };
-
   const onSumbitHandler = async () => {
     // Email validation regex
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // if (!emailRegex.test(email)) {
+    //   alert("Please enter a valid email address.");
+    //   return;
+    // }
 
-    // Discord handle validation
-    // const discordRegex = /^.+#[0-9]{4}$/;
-    if (!discordHandle) {
-      alert("Please enter a valid Discord handle (e.g., warriorspirit");
-      return;
-    }
+    // // Discord handle validation
+    // if (!discordHandle) {
+    //   alert("Please enter a valid Discord handle (e.g., warriorspirit");
+    //   return;
+    // }
 
-    // Check if at least one game is selected
-    const isGameSelected = gamesList.some((game) => game.selected);
-    if (!isGameSelected) {
-      alert("Please select at least one game.");
-      return;
-    }
+    // // Check if at least one game is selected
+    // const isGameSelected = gamesList.some((game) => game.selected);
+    // if (!isGameSelected) {
+    //   alert("Please select at least one game.");
+    //   return;
+    // }
 
     // Prepare the data to be sent
     const selectedGames = gamesList
@@ -62,11 +65,11 @@ export const BetaRegistrationForm: React.FC = () => {
 
     // API call
     try {
-      const response = await registerInterest({
-        email,
-        discordHandle,
-        selectedGames,
-      });
+      // const response = await registerInterest({
+      //   email,
+      //   discordHandle,
+      //   selectedGames,
+      // });
 
       setEmail("");
       setDiscordHandle("");
@@ -76,8 +79,8 @@ export const BetaRegistrationForm: React.FC = () => {
           selected: false,
         }))
       );
-
-      console.log("API response:", response);
+      setShowConfetti(true);
+      // console.log("API response:", response);
       //   alert("Registration successful!");
     } catch (error) {
       console.error("API call failed:", error);
@@ -141,6 +144,13 @@ export const BetaRegistrationForm: React.FC = () => {
       >
         JOIN CLOSED BETA
       </motion.button>
+      {showConfetti && (
+        <Confetti
+          numberOfPieces={150}
+          width={window.innerWidth}
+          height={window.innerHeight}
+        />
+      )}
     </div>
   );
 };
