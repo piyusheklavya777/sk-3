@@ -39,24 +39,24 @@ export const BetaRegistrationForm: React.FC = () => {
 
   const onSumbitHandler = async () => {
     // Email validation regex
-    // const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    // if (!emailRegex.test(email)) {
-    //   alert("Please enter a valid email address.");
-    //   return;
-    // }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-    // // Discord handle validation
-    // if (!discordHandle) {
-    //   alert("Please enter a valid Discord handle (e.g., warriorspirit");
-    //   return;
-    // }
+    // Discord handle validation
+    if (!discordHandle) {
+      alert("Please enter a valid Discord handle (e.g., warriorspirit");
+      return;
+    }
 
-    // // Check if at least one game is selected
-    // const isGameSelected = gamesList.some((game) => game.selected);
-    // if (!isGameSelected) {
-    //   alert("Please select at least one game.");
-    //   return;
-    // }
+    // Check if at least one game is selected
+    const isGameSelected = gamesList.some((game) => game.selected);
+    if (!isGameSelected) {
+      alert("Please select at least one game.");
+      return;
+    }
 
     // Prepare the data to be sent
     const selectedGames = gamesList
@@ -65,11 +65,11 @@ export const BetaRegistrationForm: React.FC = () => {
 
     // API call
     try {
-      // const response = await registerInterest({
-      //   email,
-      //   discordHandle,
-      //   selectedGames,
-      // });
+      const response = await registerInterest({
+        email,
+        discordHandle,
+        selectedGames,
+      });
 
       setEmail("");
       setDiscordHandle("");
@@ -80,7 +80,7 @@ export const BetaRegistrationForm: React.FC = () => {
         }))
       );
       setShowConfetti(true);
-      // console.log("API response:", response);
+      console.log("API response:", response);
       //   alert("Registration successful!");
     } catch (error) {
       console.error("API call failed:", error);
