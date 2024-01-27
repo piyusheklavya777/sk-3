@@ -89,21 +89,28 @@ export const BetaRegistrationForm: React.FC = () => {
     <div
       id="closed-beta-form-section-92403y980"
       //   className="flex flex-col items-center justify-start gap-y-5 p-4 rounded-[16px] border-t-2 border-[#c2bdff]/60 bg-gradient-to-b from-[#03011c] to-transparent"
-      className="flex flex-col items-center justify-start gap-y-2 px-4 pt-4 rounded-[16px] border-t-2 border-[#d4d4ff]/80 bg-gradient-to-b from-[#050552]- from-[#020229] to-transparent anim-shiny-patch-travels-across z-10"
+      className="rounded-[16px] border-t-2 border-[#c2bdff]/70 bg-gradient-to-b from-black/90 to-transparent anim-shiny-patch-travels-across overflow-hidden flex flex-col items-center justify-start gap-y-6 px-4 relative"
     >
+      {/* absolutes */}
+      <div
+        id="shiny-patch-2547980"
+        className="z-20 absolute inset-0 anim-shiny-patch-travels-across bg-red-500"
+      ></div>
+      {/* absolutes end */}
       <input
         type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="email"
-        className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#d4d4ff]/80 text-[#c2bdff]/70 placeholder:text-[#d4d4ff]/40 placeholder:font-lato font-lato p-2 outline-none bg-black/80 z-20"
+        className="w-[300px] px-2 py-1 rounded-[5px] border-b-2 border-[#c2bdff]/60 text-[#c2bdff]/70 placeholder:text-[#d4d4ff]/40 placeholder:font-lato font-lato outline-none bg-[rgba(139,139,235,0.09)] z-20"
       />
+
       <input
         type="text"
         value={discordHandle}
         onChange={(e) => setDiscordHandle(e.target.value)}
         placeholder="discord handle e.g. warriorspirit"
-        className="w-[300px] h-[50px] rounded-[5px] border-b-2 border-[#d4d4ff]/80 text-[#c2bdff]/70 placeholder:text-[#d4d4ff]/40 placeholder:font-lato font-lato p-2 outline-none bg-black/80 z-20"
+        className="w-[300px] px-2 py-1 rounded-[5px] border-b-2 border-[#c2bdff]/60 text-[#c2bdff]/70 placeholder:text-[#d4d4ff]/40 placeholder:font-lato font-lato outline-none bg-[rgba(139,139,235,0.09)] z-20"
       />
       {/* code for a multiselect */}
       <div
@@ -116,10 +123,10 @@ export const BetaRegistrationForm: React.FC = () => {
         </h1>
       </div>
       <SelectGamesGrid gameList={gamesList} setGameList={setGamesList} />
-      <div
+      {/* <div
         id="separator-76345748"
-        className="z-20 relative flex-none w-full h-[20px]"
-      ></div>
+        className="z-20 relative flex-none w-full h-[0px]"
+      ></div> */}
       <motion.button
         animate={{ scale: 1 }}
         transition={{
@@ -201,7 +208,7 @@ const SelectGamesGrid: React.FC<{
                   }}
                 >
                   <Image
-                    className="relative z-10 cursor-pointer"
+                    className="relative z-10 cursor-pointer hover:scale-[150%] hover:z-20 transition duration-500 ease-in-out"
                     src={e.imagesrc}
                     alt="Next.js Logo"
                     width={isMobile ? 100 : 90}

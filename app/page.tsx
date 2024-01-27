@@ -15,28 +15,6 @@ export default function Home() {
         id="body-pattern-29638264"
         className="z-40 h-[200vh] cust-body-bkg-blue absolute top-0 bg-opacity-50 opacity-40"
       ></div>
-      {/* <div
-        id="body-pattern-29638264"
-        className="z-20 absolute inset-0 bg-opacity-50 opacity-40"
-      ></div> */}
-      {/* <div
-        id="body-bkg-video-29458548"
-        className="z-10 absolute inset-0 bg-cover bg-center overflow-hidden"
-      >
-        <BKGVideo src="/overwatch_action.mp4" />
-      </div> */}
-      <div
-        id="info-pill-35624574"
-        className="w-full z-40 fixed top-2 inset-x-0 inline-flex ic jc"
-      >
-        <BetaLaunchPill />
-      </div>
-      <div id="navbar-clr-4253564" className="w-full z-40 fixed top-0">
-        <NavBar />
-      </div>
-      {/* <div id="navbar-clr-4253564" className="w-full z-40 absolute bottom-0">
-        <Footer />
-      </div> */}
       <div
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col items-center justify-between"
@@ -48,7 +26,7 @@ export default function Home() {
         <div id="section-1-container" className="flex-none w-full">
           <SectionOne />
         </div>
-        <div id="join-closed-beta-section" className="flex-none pt-4">
+        <div id="join-closed-beta-section" className="flex-none pt-4 cust-body-bkg-blue w-full"> {/* bg is applied here so that paddings also covered with it */}
           <ClosedBetaSection />
         </div>
         <div
@@ -80,11 +58,13 @@ export default function Home() {
       <div id="navbar-clr-4253564" className="w-full z-40">
         <Footer />
       </div>
+      {/* absolutes */}
+      <div id="navbar-clr-4253564" className="w-full z-40 fixed top-0">
+        <NavBar />
+      </div>
     </div>
   );
 }
-
-
 
 const NavBar: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
