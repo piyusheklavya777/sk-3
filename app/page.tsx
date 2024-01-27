@@ -1,20 +1,17 @@
 "use client";
 import { useMediaQuery } from "react-responsive";
 import { SectionOne } from "./components/section-one/section-one";
-import { SectionTwo } from "./components/section-two/section-two";
+import { FeaturesSection } from "./components/features-section/features-section";
 import { SectionFAQ } from "./components/section-three/section-faq";
 import { ClosedBetaSection } from "./components/closed-beta-form-section/closed-beta-form-section";
 import Image from "next/image";
 import { BenefitsSection } from "./components/section-benefits/benefits";
 import { Footer } from "./components/footer/footer";
+import { ParticlesEffect } from "./atoms/particles-effect-wrapper";
 
 export default function Home() {
   return (
     <div id="body" className=" cust-body-bkg-black relative">
-      <div
-        id="body-pattern-29638264"
-        className="z-40 h-[200vh] cust-body-bkg-blue absolute top-0 bg-opacity-50 opacity-40"
-      ></div>
       <div
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col items-center justify-between"
@@ -26,17 +23,32 @@ export default function Home() {
         <div id="section-1-container" className="flex-none w-full">
           <SectionOne />
         </div>
-        <div id="section-2-container" className="flex-none">
-          <SectionTwo />
+        <div id="section-2-container" className="flex-none relative">
+          <div
+            id="particles-effect-wrapper-235235"
+            className="absolute z-0 inset-0"
+          >
+            <ParticlesEffect />
+          </div>
+          <div
+            id="section-2-content-clr-235235"
+            className="relative z-20 section-2-content-cont"
+          >
+            <FeaturesSection />
+          </div>
         </div>
-        <div id="join-closed-beta-section" className="flex-none pt-4 cust-body-bkg-blue w-full"> {/* bg is applied here so that paddings also covered with it */}
+        <div
+          id="join-closed-beta-section"
+          className="flex-none pt-4 cust-body-bkg-blue w-full"
+        >
+          {/* bg is applied here so that paddings also covered with it */}
           <ClosedBetaSection />
         </div>
         <div
           id="vertical-separator-252njg4trw"
           className="flex-none h-[20px]"
         ></div>
-        
+
         <div
           id="vertical-separator-252njg4trw"
           className="flex-none h-[20px]"
