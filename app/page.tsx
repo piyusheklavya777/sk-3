@@ -8,6 +8,7 @@ import Image from "next/image";
 import { BenefitsSection } from "./components/section-benefits/benefits";
 import { Footer } from "./components/footer/footer";
 import { ParticlesEffect } from "./atoms/particles-effect-wrapper";
+import { RegistrationsCounter } from "./components/closed-beta-form-section/registration-counter";
 
 export default function Home() {
   return (
@@ -39,10 +40,29 @@ export default function Home() {
         </div>
         <div
           id="join-closed-beta-section"
-          className="flex-none pt-4 cust-body-bkg-blue w-full"
+          className="flex-none pt-4 cust-body-bkg-blue w-full relative"
         >
           {/* bg is applied here so that paddings also covered with it */}
-          <ClosedBetaSection />
+          <div
+            id="section-closedbeta-content-clr-235235"
+            className="relative z-20"
+          >
+            <ClosedBetaSection />
+          </div>
+          {/* absolutes */}
+          <div
+            id="bottom-filter-39782tfu4"
+            className="absolute z-0 inset-x-0 bottom-0 h-[70%] bg-gradient bg-gradient-to-b from-transparent to-black"
+          ></div>
+        </div>
+        <div
+          id="vertical-separator-252njg4trw"
+          className="flex-none h-20"
+        ></div>
+        <div id="section-registrations-counter-cont-87926543fhj" className="flex-none w-full">
+          <div id="registrations-counter-clr-235235" className="relative z-20 w-full">
+            <RegistrationsCounter />
+          </div>
         </div>
         <div
           id="vertical-separator-252njg4trw"

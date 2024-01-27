@@ -136,7 +136,7 @@ export const BetaRegistrationForm: React.FC = () => {
         id="separator-76345748"
         className="z-20 relative flex-none w-full h-[0px]"
       ></div> */}
-      <motion.button
+      {/* <motion.button
         animate={{ scale: 1 }}
         transition={{
           duration: 0.4,
@@ -149,6 +149,20 @@ export const BetaRegistrationForm: React.FC = () => {
         className="px-4 py-[14px] rounded-[5px] font-lato tracking-widest text-[#c2bdff]/90 text-sm border-b border-[#c2bdff]/60 p-2 outline-none bg-black/80 transition duration-500 ease-in-out hover:bg-[#c2bdff]/50 hover:text-black"
       >
         JOIN CLOSED BETA
+      </motion.button> */}
+      <motion.button
+        animate={{ scale: 1 }}
+        transition={{
+          duration: 0.4,
+          ease: "easeInOut",
+          repeat: Infinity,
+          repeatType: "mirror",
+        }}
+        onClick={onSumbitHandler}
+        id="closed-beta-form-submit-button-8273645"
+        className="px-2 py-[6px] rounded-[10px] border-b border-[#c2bdff]/60 outline-none cust-gold-gradient transition duration-500 ease-in-out hover:scale-[120%]"
+      >
+        <p className="text-xl font-poppins cust-text-inner-shadow drop-shadow-lg font-bold tracking-wide cust-gold-text">JOIN CLOSED BETA</p>
       </motion.button>
       {showConfetti && (
         <Confetti
