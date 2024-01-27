@@ -65,13 +65,14 @@ export const ParticlesEffect = () => {
       },
       particles: {
         color: {
+          // rgb(194 189 255 / 0.9);
           value: "#c2bdff",
         },
         links: {
-          color: "#ffffff",
+          color: "#c2bdff",
           distance: 150,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.9,
           width: 1,
         },
         move: {
@@ -91,7 +92,7 @@ export const ParticlesEffect = () => {
           value: 400,
         },
         opacity: {
-          value: 0.3,
+          value: 0.9,
         },
         shape: {
           type: "rectangle",

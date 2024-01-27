@@ -91,10 +91,6 @@ const RhinoGrid: React.FC = () => {
     <div
       id="Rhino-grid-cont-82749505"
       className="px-[5%] grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-10" // bg-gradient-to-b from-transparent via-[#040512] via-[#040512] via-[#040512] to-transparent "
-      style={{
-        background:
-          "linear-gradient(to bottom, transparent, #040512 20%, #040512 80%, transparent)",
-      }}
     >
       {Cards.map((card, index) => (
         <motion.div
