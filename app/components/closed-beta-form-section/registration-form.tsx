@@ -121,8 +121,14 @@ export const BetaRegistrationForm: React.FC = () => {
         className="w-full inline-flex js ic pl-1"
       >
         {/* <h1 className="text-[#d4d4ff]/70 font-lato text-sm"> */}
-        <h1 className="text-yellow-100 font-lato font-bold text-sm">
-          Click to select your games
+        <h1 className="text-[#c2bdff]/90 font-lato font-bold text-sm">
+          Click to select your games{" "}
+          <span
+            id="number-of-games-selected-counter"
+            className="text-[#c2bdff]/70 font-lato font-normal text-[12px] italic"
+          >
+            ({gamesList.filter((e) => e.selected).length}/{gamesList.length})
+          </span>
         </h1>
       </div>
       <SelectGamesGrid gameList={gamesList} setGameList={setGamesList} />
@@ -200,7 +206,7 @@ const SelectGamesGrid: React.FC<{
               return (
                 <div
                   id="select-game-1"
-                  className="flex-none relative"
+                  className="flex-none relative cursor-pointer hover:scale-[150%] hover:z-20 transition duration-500 ease-in-out"
                   key={i}
                   onClick={() => {
                     setGameList((prev) => {
@@ -218,7 +224,7 @@ const SelectGamesGrid: React.FC<{
                   }}
                 >
                   <Image
-                    className="relative z-10 cursor-pointer hover:scale-[150%] hover:z-20 transition duration-500 ease-in-out"
+                    className="relative z-10"
                     src={e.imagesrc}
                     alt="Next.js Logo"
                     width={isMobile ? 100 : 90}
