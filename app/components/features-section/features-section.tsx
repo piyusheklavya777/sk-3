@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
+import { FeaturesCard } from "./features-card";
 
 const Cards = [
   {
@@ -42,7 +43,7 @@ const Cards = [
   },
 ];
 
-export const SectionTwo: React.FC = () => {
+export const FeaturesSection: React.FC = () => {
   // Example data for the cards
 
   return (
@@ -108,7 +109,7 @@ const RhinoGrid: React.FC = () => {
           {/* <GlossyCard
             key={index}
             imagesrc={card.imagesrc}
-            points={card.points}
+            points={card.points[0]}
           /> */}
           <FeaturesCard
             key={index}
@@ -122,80 +123,42 @@ const RhinoGrid: React.FC = () => {
   );
 };
 
-const FeaturesCard: React.FC<{
-  title: string;
-  imagesrc: string;
-  description: string;
-}> = ({ title, imagesrc, description }) => {
-  return (
-    <div
-      id="features-card-cont-6857987"
-      className="h-full js ic bg-black/50 border border-[#000020]/30 rounded-[5px] flex flex-col p-2"
-    >
-      <div id="title-images" className="flex-none">
-        <Image
-          className="relative w-full"
-          src={imagesrc}
-          alt="Next.js Logo"
-          width={300}
-          height={300}
-          priority
-        />
-      </div>
-      <div id="title-text-56574234" className="flex-none">
-        <h3 className="text-white text-4xl font-poppins font-bold uppercase tracking-widest p-2">
-          {title}
-        </h3>
-      </div>
-      <div
-        id="line-separator-89g4u5gpuo894"
-        className="flex-none w-full h-[2px] bg-gradient-to-r from-transparent via-white to-transparent"
-      ></div>
-      <div id="description-text-56574234" className="flex-none">
-        <h3 className="text-white/70 text-md font-lato tracking-wide p-2 text-center">
-          {description}
-        </h3>
-      </div>
-    </div>
-  );
-};
-
-const GlossyCard: React.FC<{
-  imagesrc: string;
-  points: string[];
-}> = ({ imagesrc, points }) => {
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
-  return (
-    <div className="h-full flex flex-col items-center justify-start bg-gray-900/30 border border-gray-700 rounded-lg p-4 shadow-lg backdrop-blur-md transform transition duration-500 hover:scale-[110%]">
-      <div id="sk-logo" className="flex-none">
-        <Image
-          className="relative"
-          src={imagesrc}
-          alt="Next.js Logo"
-          width={isMobile ? 240 : 300}
-          height={100}
-          priority
-        />
-      </div>
-      <div id="vertical-spacer" className="flex-none h-[10px]"></div>
-      <ul className="lg:px-[20%]">
-        {points.map((point, index) => {
-          const borderColor =
-            index % 2 === 0 ? "border-red-400" : "border-blue-300";
-          return (
-            <>
-              <li
-                key={index}
-                className={`pl-[5%] text-sm md:text-md mb-1 text-white font-lato tracking-widest border-l-4 ${borderColor}`}
-              >
-                {point}
-                {"🔥"}
-              </li>
-              <div id="vertical-spacer" className="h-[10px]"></div>
-            </>
-          );
-        })}
-      </ul>
-    </div>
-  );
-};
+// const GlossyCard: React.FC<{
+//   imagesrc: string;
+//   points: string[];
+// }> = ({ imagesrc, points }) => {
+//   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
+//   return (
+//     <div className="h-full flex flex-col items-center justify-start bg-gray-900/30 border border-gray-700 rounded-lg p-4 shadow-lg backdrop-blur-md transform transition duration-500 hover:scale-[110%]">
+//       <div id="sk-logo" className="flex-none">
+//         <Image
+//           className="relative"
+//           src={imagesrc}
+//           alt="Next.js Logo"
+//           width={isMobile ? 240 : 300}
+//           height={100}
+//           priority
+//         />
+//       </div>
+//       <div id="vertical-spacer" className="flex-none h-[10px]"></div>
+//       <ul className="lg:px-[20%]">
+//         {points.map((point, index) => {
+//           const borderColor =
+//             index % 2 === 0 ? "border-red-400" : "border-blue-300";
+//           return (
+//             <>
+//               <li
+//                 key={index}
+//                 className={`pl-[5%] text-sm md:text-md mb-1 text-white font-lato tracking-widest border-l-4 ${borderColor}`}
+//               >
+//                 {point}
+//                 {"🔥"}
+//               </li>
+//               <div id="vertical-spacer" className="h-[10px]"></div>
+//             </>
+//           );
+//         })}
+//       </ul>
+//     </div>
+//   );
+// };
