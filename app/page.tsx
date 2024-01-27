@@ -26,6 +26,9 @@ export default function Home() {
         <div id="section-1-container" className="flex-none w-full">
           <SectionOne />
         </div>
+        <div id="section-2-container" className="flex-none">
+          <SectionTwo />
+        </div>
         <div id="join-closed-beta-section" className="flex-none pt-4 cust-body-bkg-blue w-full"> {/* bg is applied here so that paddings also covered with it */}
           <ClosedBetaSection />
         </div>
@@ -33,9 +36,7 @@ export default function Home() {
           id="vertical-separator-252njg4trw"
           className="flex-none h-[20px]"
         ></div>
-        <div id="section-2-container" className="flex-none">
-          <SectionTwo />
-        </div>
+        
         <div
           id="vertical-separator-252njg4trw"
           className="flex-none h-[20px]"
