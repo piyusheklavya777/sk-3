@@ -1,3 +1,4 @@
+import { useNotificationStore } from "@/app/zustand/notification.store";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 
@@ -9,6 +10,17 @@ export const Footer: React.FC = () => {
       top: window.innerHeight * (isMobile ? 0.65 : 0.9),
       behavior: "smooth",
     });
+  };
+  const { addNotification } = useNotificationStore();
+
+  const onClickJoinDiscord = () => {
+    addNotification([
+      {
+        message:
+          "Due to an attempted phishing attack on our company discord account our server has been restricted. We are currently working with discord to resolve this issue and return full access soon.",
+        type: "error",
+      },
+    ]);
   };
   return (
     <div
@@ -28,11 +40,7 @@ export const Footer: React.FC = () => {
           src="/discord-logo.svg"
           alt="Discord logo"
           className="rounded-[5px] bg-transparent opacity-70 cursor-pointer"
-          onClick={() =>
-            alert(
-              "Due to an attempted phishing attack on our company discord account our server has been restricted. We are currently working with discord to resolve this issue and return full access soon"
-            )
-          }
+          onClick={() => onClickJoinDiscord()}
           width={24}
           height={24}
           priority

@@ -6,6 +6,8 @@ import CountUp from "react-countup";
 export const RegistrationsCounter: React.FC = () => {
   const [count, setUpdateKey] = useState<number>(44906);
 
+  const [bogusSignal, setBogusSignal] = useState<boolean>(true);
+
   const refreshCount = async () => {
     const newCount = await getInterestsCount();
     setUpdateKey(() => Number(44906 + Number(newCount)));
@@ -17,15 +19,21 @@ export const RegistrationsCounter: React.FC = () => {
 
     // Set up the interval for fetching data every 5 seconds
     const interval = setInterval(() => {
-      refreshCount();
-    }, 60000); // 5 seconds interval
+      setBogusSignal((prev) => !prev);
+      if (bogusSignal) { // just to make the api calls every alternate count
+        refreshCount();
+      }
+    }, 5000); // 5 seconds interval
 
     // Clear the interval on component unmount
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div id="reg-counter-section-overall-cont" className="relative w-full py-20">
+    <div
+      id="reg-counter-section-overall-cont"
+      className="relative w-full py-20"
+    >
       <div
         id="closed-beta-registrations-counter-8273645"
         className="relative z-20 flex flex-col items-center justify-start gap-y-2 p-4 rounded-[16px]"
