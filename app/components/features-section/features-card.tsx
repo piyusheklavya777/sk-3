@@ -34,9 +34,10 @@ export const FeaturesCard: React.FC<{
         <h3 className="text-white/70 text-md font-lato tracking-wide p-2 text-center">
           <Typewriter
             options={{
-            //   autoStart: true,
+              //   autoStart: true,
               delay: 20,
               deleteSpeed: 50,
+              cursor: "",
             }}
             onInit={(typewriter) => {
               typewriter

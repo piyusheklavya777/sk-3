@@ -82,9 +82,9 @@ export default function Home() {
         </div>
         <div
           id="vertical-separator-252njg4trw"
-          className="flex-none h-[20px]"
+          className="flex-none h-[50px]"
         ></div>
-        <div id="section-3-container" className="flex-none">
+        <div id="section-3-container" className="flex-none w-full">
           <SectionFAQ />
         </div>
         <div

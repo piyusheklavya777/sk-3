@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import { useMediaQuery } from "react-responsive";
 import { motion } from "framer-motion";
 import { FeaturesCard } from "./features-card";
 
