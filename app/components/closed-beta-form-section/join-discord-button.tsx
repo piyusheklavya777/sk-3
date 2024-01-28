@@ -25,13 +25,14 @@ export const JoinDiscordButton: React.FC = () => {
         repeat: Infinity,
         repeatType: "mirror",
       }}
+      onClick={() => onClickJoinDiscord()}
       id="closed-beta-form-submit-button-8273645"
       className="px-[35px] py-2 rounded-[12px] font-lato tracking-widest border-b border-[#c2bdff]/60 outline-none bg-gradient-to-b from-blue-800 via-blue-500 to-blue-800 transition duration-500 ease-in-out"
     >
       <div
         id="Join-discord-btn-cont-flex-74867"
         className="flex items-center justify-center gap-x-2"
-        onClick={() => onClickJoinDiscord()}
+       
       >
         <Image
           className="relative z-10"
