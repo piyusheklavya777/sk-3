@@ -3,6 +3,7 @@ import { create } from "zustand";
 export type INotification = {
   id: string;
   message: string;
+  heading?: string;
   type: "success" | "error" | "warning" | "info";
 };
 

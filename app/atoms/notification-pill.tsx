@@ -4,6 +4,7 @@
 import { useEffect } from "react";
 import { useNotificationStore } from "../zustand/notification.store";
 import Typewriter from "typewriter-effect";
+import clsx from "clsx";
 export const NotificationPill: React.FC = () => {
   const { notifications, removeNotification } = useNotificationStore();
 
@@ -12,8 +13,6 @@ export const NotificationPill: React.FC = () => {
   const notificationToShow = notifications.length
     ? notifications[0]
     : undefined;
-
-  
 
   useEffect(() => {
     if (notificationToShow) {
@@ -28,16 +27,34 @@ export const NotificationPill: React.FC = () => {
     return <></>;
   }
 
+  // const notificationClasses = clsx(
+  //   "flex flex-col jc is gap-y-2 rounded-[16px] mx-5 p-2 w-full max-w-lg border-l-8",
+  //   {
+  //     "bg-gradient-to-r from-red-900 via-red-800 to-red-500/50 border-red-500/50":
+  //       notificationToShow.type === "error",
+  //     "bg-gradient-to-r from-green-900 via-green-800 to-green-500/50 border-green-500/50":
+  //       notificationToShow.type === "success",
+  //   }
+  // );
+
   return (
     <div
       id="notif-pill-cont-oby3tg4"
-      className="flex flex-col jc is gap-y-2 rounded-[16px] mx-5 p-2 bg-gradient-to-r from-red-900 via-red-800 to-red-500/50 w-full max-w-lg border-l-8 border-red-500/50"
+      className={clsx(
+        "flex flex-col jc is gap-y-2 rounded-[16px] mx-5 p-2 w-full max-w-lg border-l-8",
+        {
+          "bg-gradient-to-r from-red-900 via-red-800 to-red-500/50 border-red-500/50":
+            notificationToShow.type === "error",
+          "bg-gradient-to-r from-green-900 via-green-800 to-green-500/50 border-green-500/50":
+            notificationToShow.type === "success",
+        }
+      )}
     >
       <p
         id="notification-title-bhjrjwvl"
         className="text-red-100 font-lato font-thin text-3xl bg-black/20 px-1 py-2 w-full rounded-[8px]"
       >
-        {notificationToShow?.type === "error"
+        {notificationToShow.heading || notificationToShow?.type === "error"
           ? `Oops! Something's off`
           : "Yay!"}
       </p>
@@ -70,7 +87,7 @@ export const NotificationPill: React.FC = () => {
       >
         <button
           id="dismiss-btn-tvuh3pwtf"
-          className="text-red-100 font-poppins font-thin text-xl rounded-[7px] bg-black/30 px-[20px] py-2"
+          className="text-red-100 font-poppins font-thin text-lg rounded-[7px] bg-black/30 px-[20px] py-2"
           onClick={() => removeNotification(notificationToShow.id)}
         >
           Close
