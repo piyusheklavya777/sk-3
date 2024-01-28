@@ -9,6 +9,7 @@ import { BenefitsSection } from "./components/section-benefits/benefits";
 import { Footer } from "./components/footer/footer";
 import { ParticlesEffect } from "./atoms/particles-effect-wrapper";
 import { RegistrationsCounter } from "./components/closed-beta-form-section/registration-counter";
+import { NotificationPill } from "./atoms/notification-pill";
 
 export default function Home() {
   return (
@@ -59,8 +60,14 @@ export default function Home() {
           id="vertical-separator-252njg4trw"
           className="flex-none h-20"
         ></div>
-        <div id="section-registrations-counter-cont-87926543fhj" className="flex-none w-full">
-          <div id="registrations-counter-clr-235235" className="relative z-20 w-full">
+        <div
+          id="section-registrations-counter-cont-87926543fhj"
+          className="flex-none w-full"
+        >
+          <div
+            id="registrations-counter-clr-235235"
+            className="relative z-20 w-full"
+          >
             <RegistrationsCounter />
           </div>
         </div>
@@ -94,6 +101,11 @@ export default function Home() {
       {/* absolutes */}
       <div id="navbar-clr-4253564" className="w-full z-40 fixed top-0">
         <NavBar />
+      </div>
+      <div id="notification-pill-fixed-cont-u80gbejrqvw" className="fixed z-40 top-20 inset-x-0">
+        <div id="notification-pill-clr" className="flex jc ic">
+          <NotificationPill />
+        </div>
       </div>
     </div>
   );

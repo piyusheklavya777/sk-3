@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
 import { RegistrationsCounter } from "./registration-counter";
 import { BetaRegistrationForm } from "./registration-form";
+import { useNotificationStore } from "@/app/zustand/notification.store";
 
 const theme = {
   colors: {
@@ -47,6 +48,19 @@ export const ClosedBetaSection: React.FC = () => {
 };
 
 export const JoinDiscordButton: React.FC = () => {
+  const { addNotification } = useNotificationStore();
+
+  const onClickJoinDiscord = () => {
+    console.log("adding notification");
+    addNotification([
+      {
+        message:
+          "Due to an attempted phishing attack on our company discord account our server has been restricted. We are currently working with discord to resolve this issue and return full access soon.",
+        type: "error",
+      },
+    ]);
+  };
+
   return (
     <motion.button
       animate={{ scale: 1 }}
@@ -62,7 +76,7 @@ export const JoinDiscordButton: React.FC = () => {
       <div
         id="Join-discord-btn-cont-flex-74867"
         className="flex items-center justify-center gap-x-2"
-        onClick={() => alert("Due to an attempted phishing attack on our company discord account our server has been restricted. We are currently working with discord to resolve this issue and return full access soon. @Sada VGK")}
+        onClick={() => onClickJoinDiscord()}
       >
         <Image
           className="relative z-10"

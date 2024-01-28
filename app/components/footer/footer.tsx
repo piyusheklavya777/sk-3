@@ -30,7 +30,7 @@ export const Footer: React.FC = () => {
           className="rounded-[5px] bg-transparent opacity-70 cursor-pointer"
           onClick={() =>
             alert(
-              "Due to an attempted phishing attack on our company discord account our server has been restricted. We are currently working with discord to resolve this issue and return full access soon. @Sada VGK"
+              "Due to an attempted phishing attack on our company discord account our server has been restricted. We are currently working with discord to resolve this issue and return full access soon"
             )
           }
           width={24}
