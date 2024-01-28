@@ -1,6 +1,6 @@
 "use client";
 import { useMediaQuery } from "react-responsive";
-import { SectionOne } from "./components/section-one/section-one";
+import { SectionLanding } from "./components/section-one/section-landing";
 import { FeaturesSection } from "./components/features-section/features-section";
 import { SectionFAQ } from "./components/section-three/section-faq";
 import { ClosedBetaSection } from "./components/closed-beta-form-section/closed-beta-form-section";
@@ -23,7 +23,7 @@ export default function Home() {
           className="flex-none h-[20px]"
         ></div>
         <div id="section-1-container" className="flex-none w-full">
-          <SectionOne />
+          <SectionLanding />
         </div>
         <div id="section-2-container" className="flex-none relative">
           <div
