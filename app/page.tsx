@@ -10,6 +10,7 @@ import { Footer } from "./components/footer/footer";
 import { ParticlesEffect } from "./atoms/particles-effect-wrapper";
 import { RegistrationsCounter } from "./components/closed-beta-form-section/registration-counter";
 import { NotificationPill } from "./atoms/notification-pill";
+import { ScreenConfetti } from "./atoms/screen-confetti";
 
 export default function Home() {
   return (
@@ -95,10 +96,16 @@ export default function Home() {
         <Footer />
       </div>
       {/* absolutes */}
-      <div id="navbar-clr-4253564" className="w-full z-40 fixed top-0">
+      <div id="screen-confetti-cont-iprngqeow4" className="fixed z-40 inset-0 pointer-events-none">
+        <ScreenConfetti />
+      </div>
+      <div id="navbar-clr-4253564" className="z-40 fixed inset-x-0 top-0">
         <NavBar />
       </div>
-      <div id="notification-pill-fixed-cont-u80gbejrqvw" className="fixed z-40 top-20 inset-x-0">
+      <div
+        id="notification-pill-fixed-cont-u80gbejrqvw"
+        className="fixed z-40 top-20 inset-x-0"
+      >
         <div id="notification-pill-clr" className="flex jc ic">
           <NotificationPill />
         </div>

@@ -5,7 +5,9 @@ import Confetti from "react-confetti";
 import GAMES_LIST from "./games-list.json";
 import { useMediaQuery } from "react-responsive";
 import { registerInterest } from "@/app/utilities/vercel-db-utils";
-import { set } from "lodash";
+import { add, set } from "lodash";
+import { useNotificationStore } from "@/app/zustand/notification.store";
+import { useConfettiStore } from "@/app/zustand/confetti.store";
 
 export const BetaRegistrationForm: React.FC = () => {
   // create a state for the selected games
@@ -23,16 +25,8 @@ export const BetaRegistrationForm: React.FC = () => {
     }))
   );
 
-  const [showConfetti, setShowConfetti] = useState<boolean>(false);
-
-  // after 5 seconds, reset the confetti to false
-  useEffect(() => {
-    if (showConfetti) {
-      setTimeout(() => {
-        setShowConfetti(false);
-      }, 5000);
-    }
-  }, [showConfetti]);
+  const { addNotification } = useNotificationStore();
+  const { setConfetti } = useConfettiStore();
 
   const [email, setEmail] = useState("");
   const [discordHandle, setDiscordHandle] = useState("");
@@ -41,20 +35,36 @@ export const BetaRegistrationForm: React.FC = () => {
     // Email validation regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      alert("Please enter a valid email address.");
+      addNotification([
+        {
+          message: "Please enter a valid email address.",
+          type: "error",
+        },
+      ]);
       return;
     }
 
     // Discord handle validation
     if (!discordHandle) {
-      alert("Please enter a valid Discord handle (e.g., warriorspirit");
+      addNotification([
+        {
+          message: "Please enter a valid Discord handle. e.g., warriorspirit",
+          type: "error",
+        },
+      ]);
       return;
     }
 
     // Check if at least one game is selected
     const isGameSelected = gamesList.some((game) => game.selected);
     if (!isGameSelected) {
-      alert("Please select at least one game.");
+
+      addNotification([
+        {
+          message: "Please select at least one game.",
+          type: "error",
+        },
+      ]);
       return;
     }
 
@@ -79,7 +89,18 @@ export const BetaRegistrationForm: React.FC = () => {
           selected: false,
         }))
       );
-      setShowConfetti(true);
+      addNotification([
+        {
+          message:
+            "Congratulations! You have successfully registered for the closed beta. We will contact you soon.",
+          type: "success",
+        },
+      ]);
+      setConfetti({
+        numberOfPieces: 300,
+        duration: 8000,
+      });
+
       console.log("API response:", response);
       //   alert("Registration successful!");
     } catch (error) {
@@ -120,7 +141,6 @@ export const BetaRegistrationForm: React.FC = () => {
         id="select-games-title-cont"
         className="w-full inline-flex js ic pl-1"
       >
-        {/* <h1 className="text-[#d4d4ff]/70 font-lato text-sm"> */}
         <h1 className="text-[#c2bdff]/90 font-lato font-bold text-sm">
           Click to select your games{" "}
           <span
@@ -132,24 +152,6 @@ export const BetaRegistrationForm: React.FC = () => {
         </h1>
       </div>
       <SelectGamesGrid gameList={gamesList} setGameList={setGamesList} />
-      {/* <div
-        id="separator-76345748"
-        className="z-20 relative flex-none w-full h-[0px]"
-      ></div> */}
-      {/* <motion.button
-        animate={{ scale: 1 }}
-        transition={{
-          duration: 0.4,
-          ease: "easeInOut",
-          repeat: Infinity,
-          repeatType: "mirror",
-        }}
-        onClick={onSumbitHandler}
-        id="closed-beta-form-submit-button-8273645"
-        className="px-4 py-[14px] rounded-[5px] font-lato tracking-widest text-[#c2bdff]/90 text-sm border-b border-[#c2bdff]/60 p-2 outline-none bg-black/80 transition duration-500 ease-in-out hover:bg-[#c2bdff]/50 hover:text-black"
-      >
-        JOIN CLOSED BETA
-      </motion.button> */}
       <motion.button
         animate={{ scale: 1 }}
         transition={{
@@ -162,15 +164,10 @@ export const BetaRegistrationForm: React.FC = () => {
         id="closed-beta-form-submit-button-8273645"
         className="px-2 py-[6px] rounded-[10px] border-b border-[#c2bdff]/60 outline-none cust-gold-gradient transition duration-500 ease-in-out hover:scale-[120%]"
       >
-        <p className="text-xl font-poppins cust-text-inner-shadow drop-shadow-lg font-bold tracking-wide cust-gold-text">JOIN CLOSED BETA</p>
+        <p className="text-xl font-poppins cust-text-inner-shadow drop-shadow-lg font-bold tracking-wide cust-gold-text">
+          JOIN CLOSED BETA
+        </p>
       </motion.button>
-      {showConfetti && (
-        <Confetti
-          numberOfPieces={150}
-          width={window.innerWidth}
-          height={window.innerHeight}
-        />
-      )}
     </div>
   );
 };

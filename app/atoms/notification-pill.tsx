@@ -1,9 +1,9 @@
+"use client";
 // notification pill fixed at top of screen.
 
 import { useEffect } from "react";
 import { useNotificationStore } from "../zustand/notification.store";
 import Typewriter from "typewriter-effect";
-
 export const NotificationPill: React.FC = () => {
   const { notifications, removeNotification } = useNotificationStore();
 
@@ -13,11 +13,14 @@ export const NotificationPill: React.FC = () => {
     ? notifications[0]
     : undefined;
 
+  
+
   useEffect(() => {
     if (notificationToShow) {
+      const duration = Math.ceil(42.7807 * notificationToShow?.message.length);
       setTimeout(() => {
         removeNotification(notificationToShow.id);
-      }, 8000);
+      }, duration);
     }
   }, [notifications, notificationToShow, removeNotification]);
 
@@ -34,7 +37,9 @@ export const NotificationPill: React.FC = () => {
         id="notification-title-bhjrjwvl"
         className="text-red-100 font-lato font-thin text-3xl bg-black/20 px-1 py-2 w-full rounded-[8px]"
       >
-        {notificationToShow?.type === "error" ? `Oops! Something's off` : "Yay!"}
+        {notificationToShow?.type === "error"
+          ? `Oops! Something's off`
+          : "Yay!"}
       </p>
 
       <p
