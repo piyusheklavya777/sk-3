@@ -10,12 +10,11 @@ export const SectionLanding: React.FC = () => {
   return (
     <div
       id="section-one-cont-425329842"
-      className=" h-[70vh] lg:h-[100vh] w-full relative text-wrap flex flex-col items-center justify-between gap-y-1"
+      className=" h-[70vh] lg:h-[100vh] w-full relative text-wrap flex flex-col js ic"
     >
-      {/* <div id="vertical-spacer-2y9036" className="flex-none h-[2j0px] w-full"></div> */}
       <div
         id="blurred-card-container-4245432"
-        className="z-30 mt-[25%] lg:mt-[8%] relative w-full flex justify-center items-start"
+        className="z-30 mt-[25%] lg:mt-[8%] relative w-full flex jc is"
       >
         <div className="flex-none w-full flex jc ic">
           <div
@@ -26,10 +25,30 @@ export const SectionLanding: React.FC = () => {
           </div>
         </div>
       </div>
-      <div id="scroll-down-arrow-clr-8644532" className="flex-none z-30 relative m-[10px] ">
+      <div
+        id="vertical-spacer-2y9036"
+        className="flex-none h-[5%] w-full"
+      ></div>
+      <div
+        id="description-text-ht8u3inw"
+        className="flex-none relative z-30 mx-[10%] lg:mx-[5%]"
+      >
+        <p
+          id="description-text-3turinpow"
+          className="text-[#e5e3ff] text-lg lg:text-4xl font-thin font-lato text-center lg:scale-y-[115%] lg:tracking-wide"
+        >
+          Convert your game time from your favourite games into redeemable
+          rewards.
+        </p>
+      </div>
+
+      {/* absolutes */}
+      <div
+        id="scroll-down-arrow-clr-8644532"
+        className="absolute z-40 inset-x-0 bottom-[10%] flex ic jc"
+      >
         <ScrollDownArrow />
       </div>
-      {/* absolutes */}
       <div
         id="body-bkg-video-29458548"
         className="z-10 absolute inset-0 bg-cover bg-center overflow-hidden"
@@ -86,7 +105,7 @@ export const BlurredCard: React.FC = () => {
   const TitleBox = () => {
     return (
       <div
-        id="blurred-card"
+        id="blurred-card-bopuovpwn48u"
         className="w-full flex flex-col items-center justify-between"
       >
         <div id="sk-logo" className="flex-none">
@@ -110,11 +129,11 @@ export const BlurredCard: React.FC = () => {
             priority
           />
         </div>
-        <div id="vertical-spacer" className="flex-none h-[20px]"></div>
+        {/* <div id="vertical-spacer" className="flex-none h-[20px]"></div> */}
         {/* <div id="game-cards-carousel" className="flex-none">
           <TitleBox />
         </div> */}
-        <div id="vertical-spacer" className="flex-none h-[20px]"></div>
+        {/* <div id="vertical-spacer" className="flex-none h-[20px]"></div> */}
         {/* <button
           id="battle-now-button"
           className="flex-none rounded-[5px] border border-gray-500 text-lg uppercase p-2 text-gray-300 bg-cyan-700 bg-opacity-20 bg-gradient-to-r from-gray-800 to-gray-900"
@@ -126,8 +145,8 @@ export const BlurredCard: React.FC = () => {
   };
   return (
     <div
-      id="blurred-card"
-      className="h-full max-h-[80vh] max-w-[80%] relative rounded-[15px] p-[5%] cust-blurred-card flex flex-col lg:flex-row items-center justify-start lg:justify-between"
+      id="blurred-card-hupg0wre"
+      className="h-full max-h-[80vh] max-w-[80%] relative rounded-[15px] p-[5%] cust-blurred-card flex flex-col items-center justify-start lg:justify-between"
     >
       <div id="title-section-clr-927645808" className="flex-none">
         <TitleBox />
@@ -142,75 +161,11 @@ export const BlurredCard: React.FC = () => {
 
       {/* <p
         id="hero-text-9vbyrw"
-        className="p-2 text-xl lg:text-4xl text-white font-lato font-bold tracking-widest leading-loose text-wrap"
+        className="p-2 text-xl lg:text-4xl text-white font-lato font-bold tracking-wide text-wrap"
       >
-        monetize your game time
+        Convert your game time from your favourite games into redeemable
+        rewards.
       </p> */}
     </div>
   );
 };
-
-// export const YakCarousel: React.FC = () => {
-//   const { scrollContainerRef } = useAutoScroll({
-//     scrollInterval: 1200,
-//     totalItems: 8,
-//     scrollDistance: 150,
-//     scrollDirection: "horizontal",
-//   });
-
-//   return (
-//     <motion.div
-//       ref={scrollContainerRef}
-//       // animate={controls}
-//       id="game-cards-carousel-cont"
-//       className="relative flex items-center justify-start gap-x-[20px] overflow-x-auto whitespace-nowrap p-2"
-//     >
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-1-csgo.png" />
-//       </div>
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-2-rainbow.png" />
-//       </div>
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-3-valorant.png" />
-//       </div>
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-4-tarkove.png" />
-//       </div>
-//       {/* duplicate set */}
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-1-csgo.png" />
-//       </div>
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-2-rainbow.png" />
-//       </div>
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-3-valorant.png" />
-//       </div>
-//       <div id="game-cards-clr-4308462" className="flex-none">
-//         <ZebraCard imagesrc="/gc-4-tarkove.png" />
-//       </div>
-//     </motion.div>
-//   );
-// };
-
-// export const ZebraCard: React.FC<{ imagesrc: string }> = ({ imagesrc }) => {
-//   const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
-//   return (
-//     <div
-//       id="zebra-card-cont"
-//       className="inline-block w-[120px] lg:w-[180px] py-10 rounded-[5px] hover:scale-150 transition duration-200 ease-in"
-//     >
-//       <div id="image" className="">
-//         <Image
-//           src={imagesrc}
-//           alt="Logo"
-//           layout="responsive"
-//           width={100}
-//           height={200}
-//           priority
-//         />
-//       </div>
-//     </div>
-//   );
-// };

@@ -18,10 +18,6 @@ export default function Home() {
         id="body-flex-box-cont-295039753"
         className="z-30 relative flex flex-col items-center justify-between"
       >
-        <div
-          id="vertical-separator-252njg4trw"
-          className="flex-none h-[20px]"
-        ></div>
         <div id="section-1-container" className="flex-none w-full">
           <SectionLanding />
         </div>
