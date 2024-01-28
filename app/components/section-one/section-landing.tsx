@@ -5,6 +5,7 @@ import { BKGVideo } from "./background-video";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useAutoScroll } from "@/app/utility-hooks/auto-scroll-hoook";
+import Typewriter from "typewriter-effect";
 
 export const SectionLanding: React.FC = () => {
   return (
@@ -37,8 +38,24 @@ export const SectionLanding: React.FC = () => {
           id="description-text-3turinpow"
           className="text-[#e5e3ff] text-lg lg:text-4xl font-thin font-lato text-center lg:scale-y-[115%] lg:tracking-wide"
         >
-          Convert your game time from your favourite games into redeemable
-          rewards.
+          <span className="hidden">Y</span>
+          <Typewriter
+            options={{
+              //   autoStart: true,
+              delay: 18,
+              deleteSpeed: 50,
+              cursor: "",
+            }}
+            onInit={(typewriter) => {
+              typewriter
+                .pauseFor(1000)
+                .typeString(
+                  `Convert your game time from your favourite games into redeemable rewards.`
+                )
+
+                .start();
+            }}
+          />
         </p>
       </div>
 
