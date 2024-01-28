@@ -6,7 +6,7 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useAutoScroll } from "@/app/utility-hooks/auto-scroll-hoook";
 
-export const SectionOne: React.FC = () => {
+export const SectionLanding: React.FC = () => {
   return (
     <div
       id="section-one-cont-425329842"
