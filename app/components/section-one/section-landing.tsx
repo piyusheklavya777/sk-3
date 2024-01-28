@@ -10,7 +10,7 @@ export const SectionLanding: React.FC = () => {
   return (
     <div
       id="section-one-cont-425329842"
-      className=" h-[70vh] lg:h-[100vh] w-full relative text-wrap flex flex-col js ic"
+      className=" h-[70vh] lg:h-[100vh] w-full relative text-wrap flex flex-col jc lg:justify-start ic"
     >
       <div
         id="blurred-card-container-4245432"
