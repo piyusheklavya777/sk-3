@@ -13,7 +13,7 @@ export const RegistrationsCounter: React.FC = () => {
 
   useEffect(() => {
     // Fetch data immediately on component mount
-    refreshCount();
+    // refreshCount();
 
     // Set up the interval for fetching data every 5 seconds
     const interval = setInterval(() => {
