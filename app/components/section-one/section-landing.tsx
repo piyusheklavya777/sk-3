@@ -85,13 +85,14 @@ export const SectionLanding: React.FC = () => {
 };
 
 const ScrollDownArrow = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 600px)" });
   const handleScroll = () => {
-    // Calculate 20vh from the current scroll position
-    window.scrollTo({
-      top: window.innerHeight * (isMobile ? 0.65 : 0.9),
-      behavior: "smooth",
-    });
+    const element = document.getElementById("join-closed-beta-section");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
   };
   return (
     <div

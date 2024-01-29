@@ -96,7 +96,10 @@ export default function Home() {
         <Footer />
       </div>
       {/* absolutes */}
-      <div id="screen-confetti-cont-iprngqeow4" className="fixed z-40 inset-0 pointer-events-none">
+      <div
+        id="screen-confetti-cont-iprngqeow4"
+        className="fixed z-40 inset-0 pointer-events-none"
+      >
         <ScreenConfetti />
       </div>
       <div id="navbar-clr-4253564" className="z-40 fixed inset-x-0 top-0">
@@ -116,12 +119,15 @@ export default function Home() {
 
 const NavBar: React.FC = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 640px)" });
+
   const handleScroll = () => {
-    // Calculate 20vh from the current scroll position
-    window.scrollTo({
-      top: window.innerHeight * (isMobile ? 0.6 : 0.8),
-      behavior: "smooth",
-    });
+    const element = document.getElementById("join-closed-beta-section");
+    if (element) {
+      element.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
   };
   return (
     <div
@@ -142,7 +148,7 @@ const NavBar: React.FC = () => {
       <div></div>
       <div id="signup-cta-wh65434" className="flex justify-end items-center">
         <p
-          className="text-white font-bold px-2 py-1 mx-[20px] my-[15px] text-nowrap text-sm font-poppins tracking-widest border-2 border-white/80 rounded-[5px] cursor-pointer hover:bg-white hover:text-black transition duration-300 ease-in-out"
+          className="text-white font-bold px-2 py-1 mx-[20px] my-[15px] text-nowrap text-sm font-poppins tracking-widest border border-white/80 rounded-[5px] cursor-pointer hover:bg-white hover:text-black transition duration-300 ease-in-out"
           onClick={handleScroll}
         >
           JOIN
