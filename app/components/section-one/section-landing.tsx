@@ -48,7 +48,6 @@ export const SectionLanding: React.FC = () => {
             }}
             onInit={(typewriter) => {
               typewriter
-                .pauseFor(1000)
                 .typeString(
                   `Convert your game time from your favourite games into redeemable rewards.`
                 )

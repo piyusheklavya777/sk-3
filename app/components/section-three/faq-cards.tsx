@@ -45,7 +45,7 @@ export const FAQCardsFlexBox: React.FC = () => {
   return (
     <div
       id="faq-container-85324324"
-      className="w-full max-w-[90vw] flex flex-col items-start justify-start px-4 gap-y-4"
+      className="w-full max-w-[90vw] flex flex-col items-start justify-start px-4 gap-y-6"
     >
       {faqs.map((e, i) => (
         <FAQFlexItem question={e.question} answer={e.answer} key={i} />

@@ -14,7 +14,7 @@ export const SectionFAQ: React.FC = () => {
           id="faq-section-title-text-92746523"
           className="w-full flex-none text-5xl lg:text-8xl text-white font-poppins font-thin tracking-widest py-2"
         >
-          Questions<span className=" font-bold text-red-500">?</span>
+          Questions<span className=" font-bold text-transparent cust-text-stroke-red">?</span>
         </p>
         <p className="text-white/80 text-sm font-poppins font-normal tracking-widest leading-[1rem]">
           We&apos;ve got answers{" "}
