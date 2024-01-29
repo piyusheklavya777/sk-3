@@ -43,7 +43,7 @@ export const NotificationPill: React.FC = () => {
       className={clsx(
         "flex flex-col jc is gap-y-2 rounded-[16px] mx-5 p-2 w-full max-w-lg border-l-8",
         {
-          "bg-gradient-to-r from-red-900 via-red-800 to-red-500/50 border-red-500/50":
+          "bg-gradient-to-r from-red-900 via-red-800 to-red-500/50 border-red-500/30":
             notificationToShow.type === "error",
           "bg-gradient-to-r from-green-900 via-green-800 to-green-500/50 border-green-500/50":
             notificationToShow.type === "success",
@@ -52,7 +52,7 @@ export const NotificationPill: React.FC = () => {
     >
       <p
         id="notification-title-bhjrjwvl"
-        className="text-red-100 font-lato font-thin text-3xl bg-black/20 px-1 py-2 w-full rounded-[8px]"
+        className="text-white font-lato font-thin text-3xl bg-black/20 px-1 py-2 w-full rounded-[8px]"
       >
         {notificationToShow.heading || notificationToShow?.type === "error"
           ? `Oops! Something's off`
@@ -61,7 +61,7 @@ export const NotificationPill: React.FC = () => {
 
       <p
         id="notification-text-tg3ug34"
-        className=" max-w-prose text-red-100 font-lato font-thin text-md text-wrap pl-2"
+        className=" max-w-prose text-white font-lato font-thin text-md text-wrap pl-2"
       >
         <Typewriter
           options={{
