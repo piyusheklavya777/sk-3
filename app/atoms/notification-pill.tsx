@@ -16,7 +16,7 @@ export const NotificationPill: React.FC = () => {
 
   useEffect(() => {
     if (notificationToShow) {
-      const duration = Math.ceil(42.7807 * notificationToShow?.message.length);
+      const duration = Math.ceil(50.7807 * notificationToShow?.message.length);
       setTimeout(() => {
         removeNotification(notificationToShow.id);
       }, duration);
