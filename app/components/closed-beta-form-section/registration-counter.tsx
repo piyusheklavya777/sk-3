@@ -40,7 +40,10 @@ export const RegistrationsCounter: React.FC = () => {
       >
         <p
           id="closed-beta-registrations-counter-text-8273645"
-          className="text-gray-200 font-lato tracking-widest text-6xl lg:text-6xl"
+          className="text-white tracking-widest text-8xl lg:text-12xl"
+          style={{
+            fontFamily: "calculator",
+          }}
         >
           <CountUp end={count} redraw={true} suffix="+" />
         </p>

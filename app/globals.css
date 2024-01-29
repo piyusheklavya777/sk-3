@@ -162,3 +162,15 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
   background-size: 300% 300%;
   animation: moveBackground 4s linear infinite;
 }
+
+@font-face {
+  font-family: 'calculator';
+  src: url('/fonts/calculator.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.cust-text-stroke-red {
+  -webkit-text-stroke: 4px #e12626;
+  text-stroke: 4px #e12626;
+}
