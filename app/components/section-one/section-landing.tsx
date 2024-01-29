@@ -36,7 +36,7 @@ export const SectionLanding: React.FC = () => {
       >
         <p
           id="description-text-3turinpow"
-          className="text-[#e5e3ff] text-lg lg:text-4xl font-thin font-lato text-center lg:scale-y-[115%] lg:tracking-wide"
+          className="text-[#e5e3ff] text-xl lg:text-4xl font-thin font-lato text-center lg:scale-y-[105%] lg:tracking-wide"
         >
           <span className="hidden">Y</span>
           <Typewriter
@@ -61,7 +61,7 @@ export const SectionLanding: React.FC = () => {
       {/* absolutes */}
       <div
         id="scroll-down-arrow-clr-8644532"
-        className="absolute z-40 inset-x-0 bottom-[10%] flex ic jc"
+        className="absolute z-40 inset-x-0 bottom-[8%] flex ic jc"
       >
         <ScrollDownArrow />
       </div>
