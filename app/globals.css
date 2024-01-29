@@ -171,6 +171,6 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
 }
 
 .cust-text-stroke-red {
-  -webkit-text-stroke: 4px #e12626;
-  text-stroke: 4px #e12626;
+  -webkit-text-stroke: 3px #ffffff;
+  text-stroke: 4px #ffffff;
 }
