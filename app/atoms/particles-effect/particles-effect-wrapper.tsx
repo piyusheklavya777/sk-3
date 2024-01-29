@@ -11,7 +11,32 @@ import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, i
 // import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 
-export const ParticlesEffect = () => {
+import lineOptions from "./particles-line.json";
+import starOptions from "./particles-stars.json";
+
+const getOptionsFromPreset = (preset?: string) => {
+  switch (preset) {
+    case "web":
+      return lineOptions;
+    case "stars":
+      return starOptions;
+    default:
+      return lineOptions;
+  }
+};
+
+export const ParticlesEffect: React.FC<
+  | {
+      uniqueId: string;
+      customoptions: any;
+      preset?: never;
+    }
+  | {
+      uniqueId: string;
+      customoptions?: never;
+      preset: "web" | "stars";
+    }
+> = ({ customoptions, preset, uniqueId }) => {
   const [init, setInit] = useState(false);
 
   // this should be run only once per application lifetime
@@ -30,90 +55,21 @@ export const ParticlesEffect = () => {
   }, []);
 
   const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
+    // console.log(container);
   };
 
-  const options: ISourceOptions = useMemo(
-    () => ({
-      fullScreen: { enable: false },
-      background: {
-        color: {
-          value: "#000000",
-        },
-      },
-      fpsLimit: 60,
-      interactivity: {
-        events: {
-          onClick: {
-            enable: true,
-            mode: "push",
-          },
-          onHover: {
-            enable: true,
-            mode: "repulse",
-          },
-        },
-        modes: {
-          push: {
-            quantity: 4,
-          },
-          repulse: {
-            distance: 200,
-            duration: 0.4,
-          },
-        },
-      },
-      particles: {
-        color: {
-          // rgb(194 189 255 / 0.9);
-          value: "#c2bdff",
-        },
-        links: {
-          color: "#c2bdff",
-          distance: 150,
-          enable: true,
-          opacity: 0.9,
-          width: 1,
-        },
-        move: {
-          direction: "none",
-          enable: true,
-          outModes: {
-            default: "out", //  OutMode.out,
-          },
-          random: false,
-          speed: 6,
-          straight: false,
-        },
-        number: {
-          density: {
-            enable: true,
-          },
-          value: 400,
-        },
-        opacity: {
-          value: 0.9,
-        },
-        shape: {
-          type: "rectangle",
-          fill: true,
-        },
-        size: {
-          value: { min: 1, max: 5 },
-        },
-      },
-      detectRetina: true,
-    }),
+  const optionsToUse: ISourceOptions = useMemo(
+    () => customoptions || getOptionsFromPreset(preset),
     []
   );
 
   if (init) {
     return (
       <Particles
-        id="tsparticles"
+        id={`tsparticles-${uniqueId}`}
         className="w-full h-full z-0"
         particlesLoaded={particlesLoaded}
-        options={options}
+        options={optionsToUse}
       />
     );
   }

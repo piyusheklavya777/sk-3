@@ -7,7 +7,7 @@ import { ClosedBetaSection } from "./components/closed-beta-form-section/closed-
 import Image from "next/image";
 import { BenefitsSection } from "./components/section-benefits/benefits";
 import { Footer } from "./components/footer/footer";
-import { ParticlesEffect } from "./atoms/particles-effect-wrapper";
+import { ParticlesEffect } from "./atoms/particles-effect/particles-effect-wrapper";
 import { RegistrationsCounter } from "./components/closed-beta-form-section/registration-counter";
 import { NotificationPill } from "./atoms/notification-pill";
 import { ScreenConfetti } from "./atoms/screen-confetti";
@@ -27,7 +27,7 @@ export default function Home() {
             id="particles-effect-wrapper-235235"
             className="absolute z-0 inset-0"
           >
-            <ParticlesEffect />
+            <ParticlesEffect preset="web" uniqueId="hueioprw4rgqv" />
           </div>
           <div
             id="section-2-content-clr-235235"
@@ -49,8 +49,18 @@ export default function Home() {
           </div>
           {/* absolutes */}
           <div
+            id="particles-effect-wrapper-235235"
+            className="absolute z-0 inset-0"
+          >
+            <ParticlesEffect preset="stars" uniqueId="rqbrqi0gh2495gkr" />
+          </div>
+          <div
             id="bottom-filter-39782tfu4"
-            className="absolute z-0 inset-x-0 bottom-0 h-[70%] bg-gradient bg-gradient-to-b from-transparent to-black"
+            className="absolute z-0 inset-x-0 bottom-0 h-[30%] bg-gradient bg-gradient-to-b from-transparent to-black bordedr-2"
+          ></div>
+          <div
+            id="bottom-filter-39782tfu4"
+            className="absolute z-0 inset-x-0 top-0 h-[30%] bg-gradient bg-gradient-to-b from-black to-transparent bordder"
           ></div>
         </div>
         <div
