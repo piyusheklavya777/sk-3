@@ -14,7 +14,7 @@ import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, i
 import lineOptions from "./particles-line.json";
 import starOptions from "./particles-stars.json";
 
-const getOptionsFromPreset = (preset?: string) => {
+const getOptionsFromPreset = (preset?: "web" | "stars") => {
   switch (preset) {
     case "web":
       return lineOptions;
