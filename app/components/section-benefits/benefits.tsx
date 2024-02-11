@@ -30,7 +30,7 @@ const NetworkingSlide: React.FC = () => {
       id="networking-slide-234097"
       className="flex flex-col lg:flex-row items-center justify-between"
     >
-      <div id="networking-slide-image-234097" className="flex-none">
+      <div id="networking-slide-image-234097" className="flex-none-no">
         <LottieAnimation lottiejsonfile={gamenetworkinglottie} />
       </div>
       <div
@@ -60,7 +60,7 @@ const WalletSlide: React.FC = () => {
       id="networking-slide-234097"
       className="flex flex-col lg:flex-row-reverse items-center justify-between"
     >
-      <div id="networking-slide-image-234097" className="flex-none">
+      <div id="networking-slide-image-234097" className="flex-none-no">
         <LottieAnimation lottiejsonfile={walletlottie} />
       </div>
       <div

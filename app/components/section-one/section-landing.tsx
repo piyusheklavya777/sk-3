@@ -136,7 +136,17 @@ export const BlurredCard: React.FC = () => {
           />
         </div>
         <div id="vertical-spacer" className="flex-none h-[10px]"></div>
-        <div id="put-ip-or-shut-up-image" className="flex-none">
+        <div id="sk-subtitile-2-image" className="flex-none">
+          <Image
+            className="relative "
+            src="/sk-subtitle-2.png"
+            alt=""
+            width={isMobile ? 240 : 360}
+            height={37}
+            priority
+          />
+        </div>
+        {/* <div id="put-ip-or-shut-up-image" className="flex-none">
           <Image
             className="relative "
             src="/put-up-shut-up.png"
@@ -145,7 +155,7 @@ export const BlurredCard: React.FC = () => {
             height={37}
             priority
           />
-        </div>
+        </div> */}
         {/* <div id="vertical-spacer" className="flex-none h-[20px]"></div> */}
         {/* <div id="game-cards-carousel" className="flex-none">
           <TitleBox />
