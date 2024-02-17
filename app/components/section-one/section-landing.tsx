@@ -69,7 +69,7 @@ export const SectionLanding: React.FC = () => {
         id="body-bkg-video-29458548"
         className="z-10 absolute inset-0 bg-cover bg-center overflow-hidden"
       >
-        <BKGVideo src="/overwatch_action.mp4" />
+        <BKGVideo src="https://storage.googleapis.com/sk-3-public/overwatch_action.mp4" />
       </div>
       <div
         id="body-bkg-bottom-fade-into-blue-29458548"
