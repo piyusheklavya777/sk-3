@@ -49,7 +49,7 @@ export const SectionLanding: React.FC = () => {
             onInit={(typewriter) => {
               typewriter
                 .typeString(
-                  `Convert your game time from your favourite games into redeemable rewards.`
+                  `ScoreKount is building the next generation gaming centric L3 chain. Earn Crypto while continuing to play your already favourite games backed by Ethereum's unparalleled security.`
                 )
 
                 .start();
