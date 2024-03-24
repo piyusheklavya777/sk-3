@@ -3,7 +3,11 @@
 import { BetaRegistrationForm } from "./registration-form";
 import { JoinDiscordButton } from "./join-discord-button";
 
-export const ClosedBetaSection: React.FC = () => {
+export const ClosedBetaSection: React.FC<{
+  signalRegCountRefresh: () => void;
+}> = ({
+  signalRegCountRefresh,
+}) => {
   return (
     <div
       id="closed-beta-section-lnjrknjs"
@@ -20,7 +24,7 @@ export const ClosedBetaSection: React.FC = () => {
         className="flex flex-col js ic gap-y-2"
       >
         <div id="beta-reg-form-caller-3645437" className="flex-none">
-          <BetaRegistrationForm />
+          <BetaRegistrationForm signalRegCountRefresh={signalRegCountRefresh} />
         </div>
         <div id="separator-76345748" className="flex-none w-full h-[5px]"></div>
         <div id="join-discord-button" className="flex-none">

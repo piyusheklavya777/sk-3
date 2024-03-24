@@ -9,7 +9,9 @@ import { add, set } from "lodash";
 import { useNotificationStore } from "@/app/zustand/notification.store";
 import { useConfettiStore } from "@/app/zustand/confetti.store";
 
-export const BetaRegistrationForm: React.FC = () => {
+export const BetaRegistrationForm: React.FC<{
+  signalRegCountRefresh: () => void;
+}> = ({ signalRegCountRefresh }) => {
   // create a state for the selected games
   const [gamesList, setGamesList] = useState<
     {
@@ -58,7 +60,6 @@ export const BetaRegistrationForm: React.FC = () => {
     // Check if at least one game is selected
     const isGameSelected = gamesList.some((game) => game.selected);
     if (!isGameSelected) {
-
       addNotification([
         {
           message: "Please select at least one game.",
@@ -89,6 +90,7 @@ export const BetaRegistrationForm: React.FC = () => {
           selected: false,
         }))
       );
+
       addNotification([
         {
           message:
@@ -100,12 +102,19 @@ export const BetaRegistrationForm: React.FC = () => {
         numberOfPieces: 300,
         duration: 8000,
       });
+      signalRegCountRefresh();
 
       console.log("API response:", response);
       //   alert("Registration successful!");
     } catch (error) {
       console.error("API call failed:", error);
-      alert("Failed to submit registration. Please try again.");
+      addNotification([
+        {
+          message: "Registration failed. Please try again later.",
+          type: "error",
+        },
+      ]);
+      signalRegCountRefresh();
     }
   };
 

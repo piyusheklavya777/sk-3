@@ -11,8 +11,11 @@ import { ParticlesEffect } from "./atoms/particles-effect/particles-effect-wrapp
 import { RegistrationsCounter } from "./components/closed-beta-form-section/registration-counter";
 import { NotificationPill } from "./atoms/notification-pill";
 import { ScreenConfetti } from "./atoms/screen-confetti";
+import { useState } from "react";
 
 export default function Home() {
+  const [refreshCountSignal, setRefreshCountSignal] = useState<boolean>(false);
+
   return (
     <div id="body" className=" cust-body-bkg-black relative">
       <div
@@ -45,7 +48,11 @@ export default function Home() {
             id="section-closedbeta-content-clr-235235"
             className="relative z-20"
           >
-            <ClosedBetaSection />
+            <ClosedBetaSection
+              signalRegCountRefresh={() =>
+                setRefreshCountSignal((prev) => !prev)
+              }
+            />
           </div>
           {/* absolutes */}
           <div
@@ -75,7 +82,7 @@ export default function Home() {
             id="registrations-counter-clr-235235"
             className="relative z-20 w-full"
           >
-            <RegistrationsCounter />
+            <RegistrationsCounter refreshSignal={refreshCountSignal} />
           </div>
         </div>
         <div

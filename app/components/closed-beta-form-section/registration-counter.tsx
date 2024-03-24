@@ -3,15 +3,24 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import CountUp from "react-countup";
 
-export const RegistrationsCounter: React.FC = () => {
+export const RegistrationsCounter: React.FC<{
+  refreshSignal: boolean;
+}> = ({
+  refreshSignal,
+}) => {
   const [count, setUpdateKey] = useState<number>(44906);
 
   const [bogusSignal, setBogusSignal] = useState<boolean>(true);
 
-  const refreshCount = async () => {
-    const newCount = await getInterestsCount();
-    setUpdateKey(() => Number(44906 + Number(newCount)));
-  };
+ 
+
+  useEffect(() => {
+    const refreshCount = async () => {
+      const newCount = await getInterestsCount();
+      setUpdateKey(() => Number(44906 + Number(newCount)));
+    };
+    refreshCount();
+  }, [refreshSignal]);
 
   useEffect(() => {
     // Fetch data immediately on component mount
@@ -20,9 +29,9 @@ export const RegistrationsCounter: React.FC = () => {
     // Set up the interval for fetching data every 5 seconds
     const interval = setInterval(() => {
       setBogusSignal((prev) => !prev);
-      if (bogusSignal) { // just to make the api calls every alternate count
-        refreshCount();
-      }
+      // if (bogusSignal) { // just to make the api calls every alternate count
+      //   refreshCount();
+      // }
     }, 5000); // 5 seconds interval
 
     // Clear the interval on component unmount
